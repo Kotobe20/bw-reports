@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biscayne Water: 10% to 40% Meta Conversion Gameplan</title>
+<style>
+  @page {
+    size: letter;
+    margin: 0.45in;
+    background: #0b0f14;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0b0f14;
+    color: #e6edf3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 24px 20px 40px;
+    background: #0b0f14;
+  }
+  .header {
+    border-bottom: 1px solid #222b38;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+  .badge {
+    display: inline-block;
+    background: #132a24;
+    color: #34d399;
+    border: 1px solid #1f4d3f;
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  h1 {
+    margin: 0 0 6px;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #ffffff;
+  }
+  .subtitle {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 13px;
+  }
+  h2 {
+    margin: 24px 0 10px;
+    font-size: 17px;
+    color: #60a5fa;
+    border-left: 3px solid #3b82f6;
+    padding-left: 10px;
+  }
+  h3 {
+    margin: 14px 0 6px;
+    font-size: 14px;
+    color: #f8fafc;
+  }
+  p {
+    margin: 0 0 10px;
+    color: #cbd5e1;
+  }
+  ul, ol {
+    margin: 0 0 12px;
+    padding-left: 20px;
+    color: #cbd5e1;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+  strong {
+    color: #ffffff;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    gap: 10px;
+    margin: 12px 0 18px;
+  }
+  .kpi {
+    background: #111822;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 12px;
+  }
+  .kpi-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #94a3b8;
+    margin-bottom: 4px;
+  }
+  .kpi-val {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  .kpi-sub {
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 3px;
+  }
+  .kpi.warn .kpi-val { color: #f87171; }
+  .kpi.good .kpi-val { color: #34d399; }
+  .card {
+    background: #111822;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    page-break-inside: avoid;
+  }
+  .callout {
+    background: #0f1f1c;
+    border: 1px solid #1d4ed8;
+    border-left: 4px solid #38bdf8;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 14px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 16px;
+    font-size: 13px;
+    background: #111822;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td {
+    text-align: left;
+    padding: 9px 10px;
+    border-bottom: 1px solid #1e293b;
+    vertical-align: top;
+  }
+  th {
+    background: #16202e;
+    color: #93c5fd;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+  .tag {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    background: #1e293b;
+    color: #93c5fd;
+    margin-right: 6px;
+  }
+  .tag.red { background: #2c1518; color: #fca5a5; }
+  .tag.green { background: #102a21; color: #6ee7b7; }
+  a {
+    color: #60a5fa;
+    text-decoration: none;
+  }
+  .footer {
+    margin-top: 24px;
+    padding-top: 12px;
+    border-top: 1px solid #1e293b;
+    font-size: 11px;
+    color: #64748b;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="badge">Biscayne Water · Nov 13, 2026</div>
+    <h1>10% to 40% Meta Conversion Gameplan</h1>
+    <p class="subtitle">Built from Viktor's live Slack metrics (Nov 12) + all 4 Hormozi &amp; home-service videos Chad shared</p>
+  </div>
+
+  <div class="callout">
+    <strong>Bottom line:</strong> Hormozi told a home-service owner stuck at 10% close: <em>"you could probably get a triple, maybe even 40%."</em> The unlock is <strong>not</strong> buying more Meta ads or slashing price. It is fixing the live Zoom close first (decision makers present, 3-tier menu, 3 asks, 2 install dates, live deposit), then adding a 7-minute pre-Zoom VSL and a specific guarantee. Do not change five things in the same week.
+  </div>
+
+  <h2>1. Where Biscayne Water Stands Right Now (Viktor Slack Data, Nov 12)</h2>
+  <div class="grid">
+    <div class="kpi good">
+      <div class="kpi-label">Net Profit Trend</div>
+      <div class="kpi-val">-$2.5K MTD</div>
+      <div class="kpi-sub">Up from -$48.6K Sep, -$21.4K Oct (+$31.2K cash Nov)</div>
+    </div>
+    <div class="kpi warn">
+      <div class="kpi-label">Meta CAC (7d)</div>
+      <div class="kpi-val">$933</div>
+      <div class="kpi-sub">$1,090 kept vs $451 prior 30d; $3,081 burned on tests</div>
+    </div>
+    <div class="kpi warn">
+      <div class="kpi-label">Close Ask Rate</div>
+      <div class="kpi-val">17%</div>
+      <div class="kpi-sub">Down from 36% in Oct; 72% of calls end with no next step</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Avg Ticket (Nov)</div>
+      <div class="kpi-val">$4,626</div>
+      <div class="kpi-sub">Up from $3,569 Oct; price objections doubled 19% → 36%</div>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Metric / Bottleneck</th>
+        <th>Measured Reality</th>
+        <th>What It Means</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Meta 3-Day Kept Close Rate</strong></td>
+        <td>8.5% – 12.1% overall; English dropped to 1 kept sale out of 66 leads (Nov 1–11)</td>
+        <td>42% of English leads had a real conversation (up from 36%), so they are being reached and not closed.</td>
+      </tr>
+      <tr>
+        <td><strong>Spanish vs English</strong></td>
+        <td>Spanish statics: $415–$483 CAC (4 of last 6 Meta sales). English: ~$1,090 kept CAC</td>
+        <td>Spanish statics are working; English needs sales execution fixed before scaling spend.</td>
+      </tr>
+      <tr>
+        <td><strong>Asks &amp; Dates Win Rate</strong></td>
+        <td>With ask: <strong>48% win</strong> (3+ asks: <strong>65%</strong>) vs 15% no ask. Two dates offered: <strong>64% win</strong></td>
+        <td>The close happens on the call when reps ask and lock a date. Two dates only happened on 6% of calls.</td>
+      </tr>
+      <tr>
+        <td><strong>50% Floridian Deposit Stall</strong></td>
+        <td>Only 1 of 7 named Floridian 50% deposit links paid since Nov 5 (~$60.6K open)</td>
+        <td>Reps send a $3,250–$4,500 link with no install date and say "no rush," so the link dies.</td>
+      </tr>
+      <tr>
+        <td><strong>Spouse &amp; Speed</strong></td>
+        <td>54 spouse stalls in Oct; 90% of closes happen within 3 days (60% same day)</td>
+        <td>Running a close with one spouse guarantees a stall. Urgency is real in days 1–3.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>2. Key Takeaways from Chad's 4 Videos</h2>
+
+  <div class="card">
+    <h3>Video 1: Tyler Link × Alex Hormozi (10% → 40% Concrete Consult)</h3>
+    <p><span class="tag green">Core 3× Lever</span> <a href="https://youtu.be/HFPrWE8JAIU">youtu.be/HFPrWE8JAIU</a></p>
+    <ul>
+      <li><strong>Never email a quote and hope:</strong> Tyler quoted rough price on the phone, visited, then emailed quotes and closed 10%. Closing in the room delivers 3× the close rate. Biscayne's version is hanging up and texting a deposit link or PandaDoc.</li>
+      <li><strong>Set call rules:</strong> Qualify, give only a wide range ($3,500–$9,000+), and state out loud that the Zoom is to design the system and collect the deposit. Require <strong>all decision makers</strong> on the Zoom.</li>
+      <li><strong>Order of operations:</strong> Fix the sales motion first (1 week of training + closing on the call), then pricing. A 10% price raise doubles profit on a 10% net business, and 3×–4× close rate × margin = 8× profit.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Video 2: Hormozi with Caleb, Keys Roofing ($10M Service Playbook)</h3>
+    <p><span class="tag">VSL + Menu Close</span> <a href="https://youtu.be/o64cI6tebnU">youtu.be/o64cI6tebnU</a></p>
+    <ul>
+      <li><strong>Two short VSLs, not one long one:</strong> (1) A ~7-minute pre-Zoom VSL covering local South Florida proof, old way vs new way, and belief-breaks (fridge filters, softeners, price). (2) A second short VSL built specifically for the missing spouse.</li>
+      <li><strong>Menu prescription close:</strong> First <strong>unsell</strong> what they do not need to build trust, prescribe what fits, give a fake choice ("Floridian Pro or Lite?", "Tuesday or Thursday?"), and take the deposit on the phone.</li>
+      <li><strong>Sell speed instead of discounts:</strong> Offer a priority install boost (waived if Biscayne misses the window) rather than cutting price.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Video 3: Phil Risher, Phlash Consulting ($100M Home Service Offers)</h3>
+    <p><span class="tag">Value Equation</span> <a href="https://youtu.be/I0mgS6dv29c">youtu.be/I0mgS6dv29c</a></p>
+    <ul>
+      <li><strong>Crush effort and time delay:</strong> Affluent $3.5k–$9k buyers pay to remove hassle. Emphasize 1-visit install, HOA/permit handling, old unit removal, before/after water test photos, and zero babysitting.</li>
+      <li><strong>Pricing guide + short video on SMS:</strong> Never send a naked quote. Send a pricing guide + short video in the text thread and follow up on that thread.</li>
+      <li><strong>Two-path close &amp; financing downsell:</strong> Offer system-only vs system + annual protection plan (filter changes, water tests, priority service, rollover credit). Use financing as the money-objection downsell, not a footnote.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Video 4: MoreMozi with Cody ($140M Virtual Roofing)</h3>
+    <p><span class="tag red">Sequencing &amp; Risk</span> <a href="https://youtu.be/1hcgUXiFYm8">youtu.be/1hcgUXiFYm8</a></p>
+    <ul>
+      <li><strong>Do not change 5 things at once:</strong> Proof that high-ticket virtual home service closes at scale. Fix sales execution and cut low-ask habits before rewriting the whole offer or ad account.</li>
+      <li><strong>Specific guarantee formula:</strong> Use <em>"If you don't X in Y time, we will Z."</em> Never promise a reckless 100% refund when hardware costs are high. Guarantee water-test standards within 14 days, on-time install, and clean home, backed by a profit/fee slice or free fix.</li>
+    </ul>
+  </div>
+
+  <h2>3. Staged Target: What "10% to 40%" Actually Means</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Funnel Stage</th>
+        <th>Current Baseline</th>
+        <th>Target</th>
+        <th>Primary Lever</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Qualified Zoom (both spouses, price shown)</strong></td>
+        <td>48% win with ask; 65% with 3+ asks; 64% with 2 dates</td>
+        <td><strong>30% – 40%</strong></td>
+        <td>Menu close, 3 asks, 2 dates, live deposit, guarantee</td>
+      </tr>
+      <tr>
+        <td><strong>All Sales Calls</strong></td>
+        <td>Dragged down by 72% no-next-step &amp; 17% ask rate</td>
+        <td><strong>25% – 30%+</strong></td>
+        <td>Both-spouses rule, forced callback time, daily call drills</td>
+      </tr>
+      <tr>
+        <td><strong>All Raw Meta Leads (3-day kept)</strong></td>
+        <td>8.5% – 12.1%</td>
+        <td><strong>20%–25% first, then 30%+</strong></td>
+        <td>Above + pre-Zoom VSL, speed-to-lead, Zoom show rate</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>4. Sequenced Execution Plan</h2>
+
+  <div class="card">
+    <h3>Week 1: Sales Motion Only ($0 Spend, Biggest 3× Lever)</h3>
+    <ol>
+      <li><strong>Lock the Zoom exit rule:</strong> No Zoom that reaches price ends without 3 direct asks, 2 concrete install dates, and either a live deposit cleared on the phone or a booked clock-time callback.</li>
+      <li><strong>Enforce the both-spouses rule:</strong> Set call gives wide range ($3,500–$9,000+) and requires both decision makers on the Zoom. If one is missing, reschedule the close and text the 2-minute recap.</li>
+      <li><strong>Run the 3-tier menu close:</strong> Unsell what they do not need → prescribe Pro/Lite/Standard → "Option A or B?" → "Tuesday or Thursday?" → collect deposit while staying on the line.</li>
+      <li><strong>Handle money objections without discounting:</strong> Lead with financing (US Bank / Affirm) or priority-install speed instead of cutting ticket price.</li>
+      <li><strong>Stop Meta test bleed:</strong> Cap new Meta ad tests at $150 spend if &lt;2 leads; shift budget back into proven Spanish statics and winning Doug whitelisting.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h3>Weeks 2–3: Pre-Zoom VSLs &amp; Risk-Reversal Guarantee</h3>
+    <ol>
+      <li><strong>Ship the 7-minute pre-Zoom VSL:</strong> Play on the quiz/Calendly confirmation page with South Florida homes, local water report proof, and belief-breaks.</li>
+      <li><strong>Ship the 2-minute Spouse VSL:</strong> Sent immediately when a partner could not join the call.</li>
+      <li><strong>Launch 1 clear guarantee:</strong> Written water-quality target within 14 days + on-time install promise (we fix free or waive priority fee/slice of profit if missed).</li>
+      <li><strong>Replace naked quote PDFs:</strong> Text a pricing guide + short video in the SMS thread and follow up there.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h3>Weeks 3–6: Money Model &amp; Lead Mix</h3>
+    <ol>
+      <li><strong>Two-path close:</strong> System-only vs system + annual protection plan (filter swaps, annual test, priority service, rollover credit).</li>
+      <li><strong>B2B referral engine:</strong> Realtors, luxury property managers, well drillers, and remodelers so Meta is not the only lead source.</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    Sources: Viktor Slack reports (#admin, #sales, #invoicing through Nov 12, 2026) and transcripts of the 4 YouTube videos shared by Chad.
+  </div>
+
+</div>
+</body>
+</html>
