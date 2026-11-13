@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biscayne Water Zoom Model: Kody Landals' Digital-Only Playbook</title>
+<style>
+  @page {
+    size: letter;
+    margin: 0.45in;
+    background: #0b0f14;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0b0f14;
+    color: #e6edf3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 24px 20px 40px;
+    background: #0b0f14;
+  }
+  .header {
+    border-bottom: 1px solid #222b38;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+  .badge {
+    display: inline-block;
+    background: #132a24;
+    color: #34d399;
+    border: 1px solid #1f4d3f;
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  h1 {
+    margin: 0 0 6px;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #ffffff;
+  }
+  .subtitle {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 13px;
+  }
+  h2 {
+    margin: 24px 0 10px;
+    font-size: 17px;
+    color: #60a5fa;
+    border-left: 3px solid #3b82f6;
+    padding-left: 10px;
+  }
+  h3 {
+    margin: 14px 0 6px;
+    font-size: 14px;
+    color: #f8fafc;
+    page-break-after: avoid;
+  }
+  h2 { page-break-after: avoid; }
+  p {
+    margin: 0 0 10px;
+    color: #cbd5e1;
+  }
+  ul, ol {
+    margin: 0 0 12px;
+    padding-left: 20px;
+    color: #cbd5e1;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+  strong {
+    color: #ffffff;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    gap: 10px;
+    margin: 12px 0 18px;
+  }
+  .kpi {
+    background: #111822;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 12px;
+  }
+  .kpi-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #94a3b8;
+    margin-bottom: 4px;
+  }
+  .kpi-val {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  .kpi-sub {
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 3px;
+  }
+  .kpi.warn .kpi-val { color: #f87171; }
+  .kpi.good .kpi-val { color: #34d399; }
+  .card {
+    background: #111822;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    page-break-inside: avoid;
+  }
+  .callout {
+    background: #0f1f1c;
+    border: 1px solid #1d4ed8;
+    border-left: 4px solid #38bdf8;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 14px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 16px;
+    font-size: 13px;
+    background: #111822;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td {
+    text-align: left;
+    padding: 9px 10px;
+    border-bottom: 1px solid #1e293b;
+    vertical-align: top;
+  }
+  th {
+    background: #16202e;
+    color: #93c5fd;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+  tr { page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 12px;
+    color: #93c5fd;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    background: #1e293b;
+    color: #93c5fd;
+    margin-right: 6px;
+  }
+  .tag.red { background: #2c1518; color: #fca5a5; }
+  .tag.green { background: #102a21; color: #6ee7b7; }
+  a {
+    color: #60a5fa;
+    text-decoration: none;
+  }
+  .footer {
+    margin-top: 24px;
+    padding-top: 12px;
+    border-top: 1px solid #1e293b;
+    font-size: 11px;
+    color: #64748b;
+  }
+  .script {
+    background: #0d141c;
+    border: 1px solid #1e293b;
+    border-left: 4px solid #60a5fa;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 8px 0 14px;
+    font-size: 13px;
+  }
+  .script p { margin: 0 0 8px; color: #e2e8f0; }
+  .script p:last-child { margin-bottom: 0; }
+  .who {
+    color: #93c5fd;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 6px;
+  }
+  .sms {
+    background: #0d141c;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin: 8px 0 14px;
+    color: #e2e8f0;
+    font-size: 13px;
+    white-space: pre-wrap;
+    line-height: 1.45;
+  }
+  .stop li { color: #fca5a5; }
+  em { color: #e2e8f0; }
+
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="badge">Biscayne Water · Nov 13, 2026</div>
+    <h1>Biscayne Water Zoom Model: Kody Landals' Digital-Only Playbook</h1>
+    <p class="subtitle">Video 5 synthesis for Chad — mapped onto Meta → Quiz → Zoom. Source: <a href="https://youtu.be/7UoKtw2A4Iw">youtu.be/7UoKtw2A4Iw</a> · Hook Agency / Tim Brown with Kody Landals, Reimagine Roofing · 41:38 · Feb 11, 2025</p>
+  </div>
+
+  <div class="callout">
+    <strong>Thesis:</strong> A digital close only works if it is <strong>smoother and more trusted than sitting at the kitchen table</strong>. Treat trust like a piggy bank that has to reach $1.00. In person, a handshake can dump the whole dollar in at once. On a Zoom there is no body language — only tonality — and you will not get to $1.00 in a single call. YouTube, reviews, a defined process, and short homework videos should deposit most of it so the rep only has to put in the <strong>last 10 cents</strong>: prescribe the system, offer two install dates, and take the deposit.
+  </div>
+
+  <div class="card">
+    <h3>Honest note on the $150M number</h3>
+    <p>Chad's context was “they sell roofs over the phone doing $150M/yr.” That figure is <strong>not spoken in this video</strong>. At the time of this interview (Feb 2025) Kody said the company was in year four, in about 10 states, retail (not storm), almost entirely inbound. This is the same operator as the later Hormozi clip (Mar 2026) where he said they did <strong>$140M last year</strong>, 100% virtual, no in-home appointments. Use this video as the <strong>tactical walkthrough</strong> of that model, not as a source for the $150M stat.</p>
+  </div>
+
+  <h2>1. How Their Process Actually Runs</h2>
+  <ol>
+    <li><strong>Inbound lead.</strong> Mostly Google Local Service Ads, then Google Ads and SEO. Very little outbound. Almost no Angi-style lead vendors. Reviews do a lot of the trust work (the host cites ~600 Google reviews on the listing).</li>
+    <li><strong>Intake / set call.</strong> Clarifying questions, especially “How long do you plan to stay in the home?” If they say 10–20 years: “Are you interested in looking at options to make it last longer?” If yes, they immediately text education videos.</li>
+    <li><strong>24-hour streamlined path</strong> when the homeowner already knows they need a replacement. They go over a quote within 24 hours, give a <strong>range from per-square pricing</strong> (“somewhere between $20,000 and $23,000”), then send an inspector. <strong>The homeowner does not need to be home.</strong> Most inspections happen in the first 24 hours.</li>
+    <li><strong>Confirmation call.</strong> “Great — it's $21,000,” then they can move forward. An inspection still happens; it is just unbundled from the kitchen-table close.</li>
+    <li><strong>Assignment selling before the sales professional.</strong> A short series of process + product videos is texted. Customers often arrive already asking for the upgrade by name.</li>
+    <li><strong>Locked-in virtual sales presentation</strong> of packages, with financing used to make the upgrade an extra $10–$18/month instead of a $1,500 lump.</li>
+    <li><strong>Install as a luxury digital experience:</strong> a real on-site project manager whose job is quality and a 5-star review (not neighbor door-knocking), plus a virtual “roofing concierge” who sends a Company Cam timeline so snowbirds can watch the job from anywhere.</li>
+  </ol>
+  <p>They are not trying to win every roof buyer. The niche is people who value <strong>speed and ease over a long personal connection</strong>. Prices stay “pretty standard.” Digital is not a discount channel.</p>
+
+  <h2>2. Tactical Inventory</h2>
+
+  <div class="grid">
+    <div class="kpi good">
+      <div class="kpi-label">Upgrade rate after videos</div>
+      <div class="kpi-val">72%</div>
+      <div class="kpi-sub">Base package sold only 28% of the time</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Best product video</div>
+      <div class="kpi-val">2.5 min</div>
+      <div class="kpi-sub">3,100 private views — not listed on YouTube</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Video delivery</div>
+      <div class="kpi-val">95%+</div>
+      <div class="kpi-sub">via text (98% of texts get read vs &lt;70% email)</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Inspection speed</div>
+      <div class="kpi-val">24 hrs</div>
+      <div class="kpi-sub">Most inspections in the first day; owner need not be home</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Assignment selling (the money tactic)</h3>
+    <p>Before the sales call, homeowners watch a 2.5-minute underlayment video sent directly, not posted publicly. It is a clean either/or: synthetic underlayment is “10,000 nails = 10,000 potential leak points”; peel-and-stick is “zero nails. Do you want 10,000, or zero?” People come to the call already saying “I want the peel-and-stick.”</p>
+    <p>The dynamic flip: the customer says <strong>“I want X — how much is it?”</strong> instead of the rep saying <strong>“You should want this — here's the price.”</strong> Result: <strong>72% upgrade</strong> to mid or top. Text copy is simple: “Here's a short video explaining the different types of underlayment.” Platform: they switched to Hatch (previously RingCentral + BTexting). “Even the 75-year-old grandma probably prefers text.”</p>
+  </div>
+
+  <div class="card">
+    <h3>Pricing, financing, and the piggy bank</h3>
+    <ul>
+      <li>Three packages: base / mid / top. Financing is how upgrades happen: “base with a 10-year warranty, or for an extra $18/month a 25-year warranty — who doesn't do that upgrade?” Price “largely goes out the window” when you are the only company offering a path to what they want.</li>
+      <li>Kody came from solar and uses a National Credit Union as a competitive advantage. Ticket goes up because they can afford what they actually want, not because the rep discounted.</li>
+      <li>If the digital call is not <em>better than the expected in-person experience</em>, it gets scored as a negative: “why didn't they just come sit down like everybody else?” His coaching line: don't start with digital sales until the in-home motion is mastered, because in-home is more forgiving. Digital has to be sharper.</li>
+      <li>A referral arrives with ~90 cents already in the bank; a digital stranger starts near zero. That gap has to be filled on the site, the ad, the reviews, and the pre-call videos.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>What this video does <em>not</em> give</h3>
+    <p>No deposit-on-the-call script, no “three asks / two dates” language, no spouse close script, and no rep scorecards or close-rate numbers. The only conversion claims are that pre-appointment media makes “close percentage shoot to the roof,” plus the 72% upgrade rate. Keep using Videos 1–4 and the Nov 12 call data for those pieces. He also does not say to discount in order to close digitally.</p>
+  </div>
+
+  <h2>3. Ten-Point Map onto Biscayne Meta → Quiz → Zoom</h2>
+  <p>Biscayne baseline (Viktor, data through Thu Nov 12, 2026, 7:45 PM ET): kept close per new lead in 3 days is <strong>8.5–12.1%</strong>; <strong>72%</strong> of sales calls end with no next step; <strong>36%</strong> price objections; <strong>54 spouse stalls</strong> in October; asks win <strong>48%</strong>, three-plus asks <strong>65%</strong>, two dates <strong>64%</strong>, but a direct ask was on only <strong>17%</strong> of that week's calls; financing already offered on <strong>58%</strong>; <strong>90%</strong> of closes land within 3 days (60% same day); ticket <strong>$3,569 → $4,626</strong>. Meta leads are colder than Kody's LSAs, so pre-Zoom deposits matter more, not less.</p>
+
+  <ol>
+    <li><strong>Stop trying to deposit the whole dollar on the Zoom.</strong> A cold Meta lead + a live pitch + a price, with no homework, is why 72% of calls die. The Zoom should only add the last 10 cents.</li>
+    <li><strong>Turn the quiz into Kody's intake, then text assignment videos before the Zoom.</strong> Capture years in the home, well vs city, symptoms, and whether both decision makers will be on the Zoom. Then auto-text a short stack: a 2-minute process video, a 2–3 minute “pitcher vs whole-home” video (Biscayne's “10,000 nails or zero”), a 2–3 minute package video, and a spouse cut to both phones. Text, don't email: “Here are a couple of short videos that explain the options we'll go over on the Zoom.”</li>
+    <li><strong>Judge success the way he does:</strong> move toward <strong>72% mid/top, 28% base</strong>, because the customer asks for the better system <em>before</em> price. That is how to hold the $4,626 ticket without feeding the 36% price-objection spike.</li>
+    <li><strong>Sell a 24-hour streamlined path, not “we'll get back to you.”</strong> 90% of Biscayne closes already happen inside 3 days. Give a range on the set ($3,500–$9,000+), confirm on the Zoom once photos or a water-test result are in.</li>
+    <li><strong>Unbundle data collection from the close</strong> the way they unbundle inspection from the kitchen table. A 2-minute sink/staining video, a mailed kit, or a tech drop with no sales pitch. The Zoom is then a presentation of results + menu.</li>
+    <li><strong>Make the digital motion obviously better than Culligan at the kitchen table</strong>, or people will ask why you didn't just come out. Locked presentation, camera on, three-system visual, live proposal, deposit in-session. The Nov 12 rule still sits on top: three asks, two dates, no empty exit.</li>
+    <li><strong>Use financing the way he does, not as a footnote.</strong> It is already on 58% of calls. Put it on the menu as “recommended system is $X, or $Y/month, and the upgrade is another $Z/month.” Don't only pull it out when they flinch.</li>
+    <li><strong>Kill spouse stalls by assigning homework to both people.</strong> 54 October stalls are what happens when one person is asked to go sell the other. If the second decision maker hasn't watched, reschedule the close (same rule as Hormozi / Tyler in Video 1).</li>
+    <li><strong>Build a concierge layer so virtual doesn't feel cheap.</strong> After a deposit: install timeline by text, before/after test photos, a mid-install update, and a review ask as a field KPI. Do not turn the installer into a closer.</li>
+    <li><strong>Be honest about lead mix.</strong> His best leads are high-intent Google inbound with hundreds of reviews already doing trust work. This is a conversion playbook, not a reason to ignore fresh-lead volume or Meta CPL, and not a reason to cut price.</li>
+  </ol>
+
+  <h2>4. Implementation Checklist</h2>
+  <div class="card">
+    <h3>This week (front end of the Zoom, $0–low lift)</h3>
+    <ol>
+      <li>Lock a single Zoom presentation: range already sent, results, unsell what they don't need, three-tier menu, monthly financing next to cash, two install dates, deposit or a clock-time callback.</li>
+      <li>Add two quiz questions: years in the home, and will both decision makers be on the Zoom.</li>
+      <li>Stand up a pre-Zoom SMS sequence in the existing thread: process video, “pitcher vs whole-home” video, package video, spouse copy to both phones.</li>
+      <li>Train the set line: “I'm going to text you two short videos to watch before we meet, so the Zoom is just about picking the right system and a date.”</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h3>Next (make virtual feel premium)</h3>
+    <ol>
+      <li>Offer a no-wait data step (customer video / kit / tech drop) so the Zoom is a confirmation, not a first inspection.</li>
+      <li>Rehearse financing as an upgrade path (“+$X/month for the better system”), not a hardship option.</li>
+      <li>After every sold job: texted timeline, test photos, review ask as a field KPI.</li>
+    </ol>
+  </div>
+
+  <h2>5. Metrics to Judge It On</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>Current baseline</th>
+        <th>What “working” looks like</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Pre-Zoom video watch rate</strong></td>
+        <td>Not tracked as a close input today</td>
+        <td>Both spouses watched before the Zoom; missing viewer = reschedule the close</td>
+      </tr>
+      <tr>
+        <td><strong>Upgrade mix</strong></td>
+        <td>Ticket already rose $3,569 → $4,626; objections rose 19% → 36%</td>
+        <td>Move toward Kody's 72% mid/top, 28% base, without discounting</td>
+      </tr>
+      <tr>
+        <td><strong>Ask / two-date / empty-exit rates</strong></td>
+        <td>17% ask · two dates on 6% of calls · 72% no next step</td>
+        <td>Ask rate back above October's 36% and climbing; two dates offered as the default; empty exits fall hard</td>
+      </tr>
+      <tr>
+        <td><strong>Qualified Zoom close rate</strong></td>
+        <td>Asks already win 48%; 3+ asks 65%; two dates 64%</td>
+        <td>30–40% of decision-maker-present Zooms (the Hormozi band)</td>
+      </tr>
+      <tr>
+        <td><strong>Kept close per raw Meta lead</strong></td>
+        <td>8.5–12.1% in 3 days</td>
+        <td>20–25% first, then stretch toward 30%+. 40% of all raw Meta leads also needs show rate and fewer one-spouse / no-ask exits</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The inspiration is not “sell roofs over the phone, so just keep talking on Zoom.” It is: <strong>do the trust and the education before the Zoom, keep the call tighter than an in-home, and let the customer arrive already wanting the better system.</strong></p>
+
+  <div class="footer">
+    Sources: full auto-caption transcript of <a href="https://youtu.be/7UoKtw2A4Iw">Kody Landals Shares a Digital-Only Roofing Sales Process</a> (Hook Agency, Feb 11, 2025); Biscayne close-rate deep dive and Viktor Slack metrics through Thu Nov 12, 2026, 7:45 PM ET. The $150M/yr figure is Chad's later context, not a number spoken in this video.
+  </div>
+
+</div>
+</body>
+</html>

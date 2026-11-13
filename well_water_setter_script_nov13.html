@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biscayne Water Well Water Setter Script (Nov 13)</title>
+<style>
+  @page {
+    size: letter;
+    margin: 0.45in;
+    background: #0b0f14;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0b0f14;
+    color: #e6edf3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 24px 20px 40px;
+    background: #0b0f14;
+  }
+  .header {
+    border-bottom: 1px solid #222b38;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+  .badge {
+    display: inline-block;
+    background: #132a24;
+    color: #34d399;
+    border: 1px solid #1f4d3f;
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  h1 {
+    margin: 0 0 6px;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #ffffff;
+  }
+  .subtitle {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 13px;
+  }
+  h2 {
+    margin: 24px 0 10px;
+    font-size: 17px;
+    color: #60a5fa;
+    border-left: 3px solid #3b82f6;
+    padding-left: 10px;
+  }
+  h3 {
+    margin: 14px 0 6px;
+    font-size: 14px;
+    color: #f8fafc;
+    page-break-after: avoid;
+  }
+  h2 { page-break-after: avoid; }
+  p {
+    margin: 0 0 10px;
+    color: #cbd5e1;
+  }
+  ul, ol {
+    margin: 0 0 12px;
+    padding-left: 20px;
+    color: #cbd5e1;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+  strong {
+    color: #ffffff;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    gap: 10px;
+    margin: 12px 0 18px;
+  }
+  .kpi {
+    background: #111822;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 12px;
+  }
+  .kpi-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #94a3b8;
+    margin-bottom: 4px;
+  }
+  .kpi-val {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  .kpi-sub {
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 3px;
+  }
+  .kpi.warn .kpi-val { color: #f87171; }
+  .kpi.good .kpi-val { color: #34d399; }
+  .card {
+    background: #111822;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    page-break-inside: avoid;
+  }
+  .callout {
+    background: #0f1f1c;
+    border: 1px solid #1d4ed8;
+    border-left: 4px solid #38bdf8;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 14px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 16px;
+    font-size: 13px;
+    background: #111822;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td {
+    text-align: left;
+    padding: 9px 10px;
+    border-bottom: 1px solid #1e293b;
+    vertical-align: top;
+  }
+  th {
+    background: #16202e;
+    color: #93c5fd;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+  tr { page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 12px;
+    color: #93c5fd;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    background: #1e293b;
+    color: #93c5fd;
+    margin-right: 6px;
+  }
+  .tag.red { background: #2c1518; color: #fca5a5; }
+  .tag.green { background: #102a21; color: #6ee7b7; }
+  a {
+    color: #60a5fa;
+    text-decoration: none;
+  }
+  .footer {
+    margin-top: 24px;
+    padding-top: 12px;
+    border-top: 1px solid #1e293b;
+    font-size: 11px;
+    color: #64748b;
+  }
+  .script {
+    background: #0d141c;
+    border: 1px solid #1e293b;
+    border-left: 4px solid #60a5fa;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 8px 0 14px;
+    font-size: 13px;
+  }
+  .script p { margin: 0 0 8px; color: #e2e8f0; }
+  .script p:last-child { margin-bottom: 0; }
+  .who {
+    color: #93c5fd;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 6px;
+  }
+  .sms {
+    background: #0d141c;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin: 8px 0 14px;
+    color: #e2e8f0;
+    font-size: 13px;
+    white-space: pre-wrap;
+    line-height: 1.45;
+  }
+  .stop li { color: #fca5a5; }
+  em { color: #e2e8f0; }
+
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="badge">Biscayne Water · Nov 13, 2026</div>
+    <h1>Well Water Setter Script: Tech Test, Then Close in the Home</h1>
+    <p class="subtitle">Chad's ask: sales motion from first dial through the well test visit, using Video 1 (Hormozi × Tyler Link) as the set-call model. The salesperson is a setter, not a closer. Iron rule: standard dual tank if under 9 ppm; dual tank + chlorine injection if above 9 ppm.</p>
+  </div>
+
+  <div class="callout">
+    <strong>The motion in one line:</strong> The first call is a <strong>set</strong>, not a pricing consult. Give only a wide range, book a well-test visit with both decision makers home and two time options, and set the intention out loud: the tech tests the well, shows the results live, and if it makes sense you lock the install date and take the deposit before anyone leaves. Never email a quote and hope. That is the exact fix Hormozi gave Tyler when his concrete company was stuck at a 10% close for emailing estimates after the visit.
+  </div>
+
+  <h2>Prices and rules used in this script (what's real vs a placeholder)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Figure</th>
+        <th>Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Standard Dual Tank Well Water Package (list)</strong></td>
+        <td>$4,992 · 0% for 36 months at $139/mo on the site · quiz deposit listed at $499 (10%)</td>
+        <td>Official quote page <code>/customquote6</code> / <code>/well</code> and quiz routing (CLAUDE.md, Nov 3, 2026). Recent sold well jobs in #dispatching also came in at $3,992 (Damian Almarales, Nov 3), $4,992 (George Edmunds, Nov 8), and $5,992 (JJ Quality Builders, Nov 6) depending on RO / options.</td>
+      </tr>
+      <tr>
+        <td><strong>Dual tank + chlorine injection (iron &gt; 9 ppm)</strong></td>
+        <td><strong>[PRICE]</strong> — no list price found</td>
+        <td>Slack search for “chlorine injection,” “9ppm,” and “iron ppm” returned no official package price. Chad stated the 9 ppm decision rule in this ask; it was not found as a posted Slack policy.</td>
+      </tr>
+      <tr>
+        <td><strong>Tankless RO add-on</strong></td>
+        <td>$1,550</td>
+        <td>Sales Knowledge Base v3, Viktor in #admin, Nov 5, 2026.</td>
+      </tr>
+      <tr>
+        <td><strong>Well-test visit fee / test deposit</strong></td>
+        <td><strong>[TEST FEE]</strong> — do not invent one on the phone</td>
+        <td>Chad's Nov 4 #admin brief: “Make sure we send a technician to test the well first.” Viktor's Nov 5 KB notes mention a “well test deposit” but no dollar amount was posted. Whether the in-home test is free was still an open question (73 leads had asked). Post-warranty service trip fee is $99.95 after year 1 (not a test fee). Out-of-town trip fees were still “needs further discussion” on Nov 9.</td>
+      </tr>
+      <tr>
+        <td><strong>Deposit to close the job</strong></td>
+        <td>Floridian jobs are currently being collected at <strong>50%</strong>. The well quote page still lists a <strong>$499 (10%)</strong> deposit on $4,992. Confirm which % the in-home well close should use before reps improvise.</td>
+        <td>50% Floridian practice: #invoicing Nov 12 (e.g. Nicholas Meikle). Viktor Nov 12: only 1 of 7 named Floridian 50% deposit links paid since Nov 5 when no install date was set. Site/quiz still shows $499 for well (Nov 3).</td>
+      </tr>
+      <tr>
+        <td><strong>Payment options (current, Nov 11)</strong></td>
+        <td>$0 down, 0% interest for up to 36 months, terms 60–84 months · HSA save around 20% · Pre-pay and save $500</td>
+        <td>Chad in #admin, Nov 11, 2026, for the master Zoom deck. Lenders in use: Affirm and US Bank (#invoicing).</td>
+      </tr>
+      <tr>
+        <td><strong>Rep rule already on the books</strong></td>
+        <td>Test the well first. Do not close a well job off a phone guess. Viktor flagged Danielle's Lynn Scherer call (Nov 7) as one that “should have been the 2B well script.”</td>
+        <td>Chad #admin brief Nov 4 · Floridian Coaching Tape, Viktor #admin Nov 9.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Setter-call range stays wide on purpose: <strong>$3,500–$9,000+</strong>, depending on what the water test shows. Do not say “$4,992” or “$139 a month” on the set call. Those numbers belong in the home after the iron reading.</p>
+
+  <h2>1. Full sales motion timeline</h2>
+  <ol>
+    <li><strong>Lead in.</strong> Meta, quiz, or inbound. If the quiz or form says well water — or the first 30 seconds of the call confirm a well — this motion starts. Do not run the city-water Zoom close as if you already know the system.</li>
+    <li><strong>Speed-to-lead dial, target under 5 minutes.</strong> Viktor's Nov 12 numbers: leads called inside 5 minutes close <strong>17–19%</strong> vs about <strong>10%</strong> when the first dial is 5 minutes to 2 hours. 90% of closes land within 3 days (60% same day). Fresh leads jump the queue.</li>
+    <li><strong>Setter call (this script).</strong> Permission, discovery, wide range, two-path outcome explained without a hard price, intention set, three set questions, book the test with two time options, both decision makers home. The call does not end with a quote PDF.</li>
+    <li><strong>Confirmation texts / short videos</strong> immediately after the set (templates below). Recap time, who must be there, what the tech will do, and a 2-minute process video. If a spouse is missing from the booking, send the same text to both phones.</li>
+    <li><strong>Tech visit.</strong> Test the well. Show results live on site, especially iron ppm. Decision rule: <strong>iron under 9 ppm → standard dual tank well water system. Iron over 9 ppm → dual tank plus chlorine injection to break down the iron.</strong> Unsell what they do not need. Matt's Nov 11 #dispatching note on a Homestead well job: bring the well system in case they want to install on site.</li>
+    <li><strong>Present price in the home</strong> (or a same-day Zoom with both spouses if someone cannot be there). Menu: standard vs comprehensive, cash vs monthly, two install dates, deposit before anyone leaves. This is Hormozi's “never email a quote / close in the room.”</li>
+    <li><strong>If no decision:</strong> do not send a deposit link and say “no rush.” Hold a real window with two dates and an exact callback time. Viktor: 50% Floridian deposit links paid on only <strong>1 of 7</strong> when no install date was set. Amanda's “busy” move: leave first and lock an exact callback, don't fade into “I'll try you later.”</li>
+  </ol>
+
+  <h2>2. Who does what, and the setter's KPIs</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Role</th>
+        <th>Owns</th>
+        <th>Does not own</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Setter</strong> (the salesperson on the first dial)</td>
+        <td>Speed-to-lead, well vs city confirm, discovery, wide range only, book the test, both decision makers, two time options, confirmation text, no empty exit</td>
+        <td>A hard package price, a deposit link before the test, or “I'll email you the options”</td>
+      </tr>
+      <tr>
+        <td><strong>Tech</strong></td>
+        <td>The test, live results, the iron &lt;9 vs &gt;9 prescription, photos of the install area, a same-day install if the home is ready and the closer has the deposit (per Matt: bring the system)</td>
+        <td>Discounting, inventing a chlorine-injection price, or leaving a quote on the counter</td>
+      </tr>
+      <tr>
+        <td><strong>Closer</strong> (can be the same person as the tech if they are trained, otherwise a closer on site or on a same-day Zoom)</td>
+        <td>Menu presentation, monthly financing next to cash, two install dates, deposit, exact callback if they pause</td>
+        <td>Running the close with one spouse, or sending a 50% link with no date</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="card">
+    <h3>Setter KPIs (track weekly)</h3>
+    <ul>
+      <li><strong>Speed to first dial:</strong> share under 5 minutes. That band already closes 17–19% vs ~10% later.</li>
+      <li><strong>Well leads booked to a test</strong> (not “quote sent”) as the primary conversion of the set call.</li>
+      <li><strong>Both decision makers confirmed home</strong> on the booking. October had 54 spouse stalls when this was skipped.</li>
+      <li><strong>Two time options offered</strong> on the set. When two install dates are offered on sales calls, they win 64% — same muscle, used here on the test visit.</li>
+      <li><strong>Confirmation text sent the same hour</strong>, plus a short video.</li>
+      <li><strong>No empty exits:</strong> 72% of sales calls currently end with no next step. A set call that reaches a well confirmation must end with a booked test or a clock-time callback.</li>
+    </ul>
+  </div>
+
+  <h2>3. Word-for-word setter script</h2>
+  <p>Talk like a person, not a brochure. The words in quotes are the lines. Bracketed prompts are for the setter, not to be read aloud.</p>
+
+  <h3>Opener and permission</h3>
+  <div class="script">
+    <p class="who">Setter</p>
+    <p>“Hi, is this [Name]? This is [Rep] with Biscayne Water. You just asked us about the water at [street or city]. Did I catch you at an okay moment for a couple of minutes?”</p>
+    <p>[If they are in a car or walking away from the phone:] “No problem — I can text you two time options and we'll do this when you can actually talk. What works better, later this afternoon or this evening?”</p>
+    <p>“Great. I'm not going to try to quote you a hard price on this call. On well water we get it wrong if we guess. I just need to learn what's going on, and if we're a fit I'll get a technician out to test your well and show you the results in person. Sound fair?”</p>
+  </div>
+
+  <h3>Discovery</h3>
+  <div class="script">
+    <p class="who">Setter — ask, then shut up</p>
+    <p>“First, I just want to confirm — is the house on a well, or city water?”</p>
+    <p>[If city, switch to the city Zoom motion. If well, stay on this script.]</p>
+    <p>“What's going on with the water that made you reach out today?”</p>
+    <p>“Are you seeing orange or rust stains on the sinks, the tub, or the driveway? Any smell or taste you don't like? Is it staining fixtures or laundry?”</p>
+    <p>“Do you also use the well for irrigation, or just the house?”</p>
+    <p>“How long have you been in the home, and how long do you plan to stay?”</p>
+    <p>“Who lives there with you? Anyone we should make sure is part of this conversation — a spouse or partner?”</p>
+    <p>“Have you had a softener or any treatment on the well before? What happened with it?”</p>
+    <p>“Just so I know how to help you think about it — is this something you'd want to handle outright if it fits, or would you rather look at monthly payments? No wrong answer.”</p>
+  </div>
+  <p>Those last questions matter. Viktor's Nov 9 coaching tape: on 9 of 14 reviewed calls, reps got the household and then skipped how long they would stay, what they had already tried, and what they spend.</p>
+
+  <h3>Wide-range framing (Hormozi style — no hard price)</h3>
+  <div class="script">
+    <p class="who">Setter</p>
+    <p>“I can give you a honest range so you're not walking into this blind, but I won't quote you a hard number on the phone. That would be like telling you what's wrong with your car before it's in the shop. If someone gives you a firm well-water price without testing the well, I'd run the other way.”</p>
+    <p>“Most of the well systems we install land somewhere in the $3,500 to $9,000+ range, depending on what is actually in the water — especially iron — and what you want at the tap. We'll tighten that to a real number once we have your test results, not before.”</p>
+  </div>
+
+  <h3>Two-path outcome, still no hard quote</h3>
+  <div class="script">
+    <p class="who">Setter</p>
+    <p>“Here's the simple version of what the test is looking for. The big fork is iron.”</p>
+    <p>“If your iron is under 9 parts per million, the usual recommendation is our standard dual-tank well system. That's the system designed for most well homes we see.”</p>
+    <p>“If the iron is higher than 9, a standard tank setup isn't enough on its own. In those cases we recommend a more comprehensive dual-tank system with chlorine injection, which is what breaks that iron down so the rest of the system can do its job.”</p>
+    <p>“I am not going to guess which one you are, and I'm not going to throw you a price for the wrong one. That's why the tech comes out.”</p>
+  </div>
+
+  <h3>Set the intention (the visit is to present and collect the deposit)</h3>
+  <div class="script">
+    <p class="who">Setter</p>
+    <p>“So you know exactly what this appointment is — and what it isn't. Our technician comes out, tests your well, and shows you the results right there at the house. If the system makes sense for your water and for you, we lock in your install date and take the deposit before we leave, so you're on the schedule. We're not coming out to drop a paper on the counter and hope you call us in a few weeks.”</p>
+    <p>“Does that feel like a good use of your time?”</p>
+  </div>
+
+  <h3>The three set questions</h3>
+  <div class="script">
+    <p class="who">Setter — do not book until you hear yes to all three</p>
+    <p>“A couple of straight questions so I don't waste a trip for you or for us.”</p>
+    <p><strong>1. Do we do this kind of project?</strong> “From everything you just told me, this is exactly the kind of well we work on. If the test shows something unusual we'll tell you honestly, including if we're not the right fit.”</p>
+    <p><strong>2. Are you serious about taking care of this?</strong> “If the results come back the way we expect and the number works, are you looking to get this handled in the next couple of weeks, or are you more in a 'maybe someday' place? I only want to send a tech if you're actually looking to solve it.”</p>
+    <p><strong>3. All decision makers will be there.</strong> “When we come out, I need everyone who would say yes or no on a system like this to be home — you and [spouse/partner]. We won't do the recommendation and the numbers with only one of you there, because the other person always has questions, and then the whole visit turns into a relay message. Can you both be there for [time option]?”</p>
+  </div>
+
+  <h3>Book with two time choices</h3>
+  <div class="script">
+    <p class="who">Setter</p>
+    <p>“I can do [Day, time window A] or [Day, time window B]. Which of those is better for both of you to be home?”</p>
+    <p>“Perfect. That's [Day] at [Time] at [address]. Plan on the tech being there long enough to test, walk you through the reading, and if it's a fit, pick a date and handle the deposit. You don't need to clear out the whole afternoon, but please don't plan to duck out after five minutes.”</p>
+  </div>
+
+  <h3>Objection handling</h3>
+  <div class="card">
+    <h3>“Just give me a price.”</h3>
+    <div class="script">
+      <p>“I can give you the range I already did — most well jobs we do land in the $3,500 to $9,000+ range — but a hard number without a test would be a guess, and I don't want to guess high or low and then look sloppy when the tech is standing in your yard. The fastest way to a real number is the test visit. I've got [A] or [B]. Which works?”</p>
+    </div>
+    <h3>“I need to talk to my spouse.”</h3>
+    <div class="script">
+      <p>“That's exactly why we don't do this as a one-person meeting. Let's pick a time you can both be home so you hear the same results at the same time, and nobody has to go sell it to the other person later. Is [spouse] easier in the early evening or on the weekend?”</p>
+      <p>[If they still will not book both people:] “I'll tell you what I don't want to do — send a tech out, run the test, and then have you say you need to go repeat all of this tonight. Let's just start with a time you can both do, even if it's a day later.”</p>
+    </div>
+    <h3>“Is the test free?”</h3>
+    <div class="script">
+      <p>“The point of the visit is to get a real reading on your well and a straight recommendation, not to sell you a number over the phone. [If [TEST FEE] has been confirmed by Chad or the office, state it clearly here. If it has not, do not invent a fee or promise 'free' unless that is the written policy.] I can confirm the exact visit policy in your confirmation text so there are no surprises. Either way, we are not coming out to leave a quote on the counter. If the system makes sense, we lock the date and the deposit while we're there. Fair?”</p>
+    </div>
+    <h3>“I'm just shopping around.”</h3>
+    <div class="script">
+      <p>“That's fine — most people talk to more than one company. I'd still rather you have a real test in your hand than three guessed quotes. If you already have a number from someone who hasn't tested the well, bring it. We'll put our reading next to it so you can compare apples to apples. [A] or [B]?”</p>
+    </div>
+    <h3>“Just send me some info.”</h3>
+    <div class="script">
+      <p>“I will text you a short video of how the visit works, and a recap of what we just talked about. What I won't do is email you a fake-precise quote without testing the well — that wouldn't be accurate, and it usually just sits in the inbox. Let me send the video and let's pick a test time so the info is actually about your water. [A] or [B]?”</p>
+    </div>
+    <h3>“We're busy” / “Call me later.” (Amanda's move: leave first + exact callback)</h3>
+    <div class="script">
+      <p>“I don't want to keep you. Let's put a real time on the calendar so I'm not catching you in the middle of something again. I can do [today 6:00] or [tomorrow 12:30]. Which is better? I'll call you then, and if the well is confirmed we'll book the test on that call.”</p>
+      <p>[Do not hang up on “I'll try you later.” If they refuse both times: “No problem — what time today or tomorrow should I call, to the minute, so I can put it on my side too?”]</p>
+    </div>
+  </div>
+
+  <h3>Close of the setter call (recap + what to have ready)</h3>
+  <div class="script">
+    <p class="who">Setter</p>
+    <p>“Quick recap so we're tight: you're on a well at [address]. The main issues are [stains / smell / taste / old softener]. I'm sending [Tech / 'one of our technicians'] on [Day] at [Time]. You and [spouse] will both be home. They'll test the well, show you the iron reading, and walk you through either the standard dual-tank or the version with chlorine injection if the iron is over 9. If it makes sense, you'll pick an install date and handle the deposit right there.”</p>
+    <p>“I'm going to text you the appointment, the address we'll use, and a two-minute video so you know what to expect. Please make sure we can get to the well, the pressure tank or equipment area, and an outside spigot. If you have any old test results or the model of a current softener, just have that handy.”</p>
+    <p>“You'll get my text in the next few minutes. If anything comes up and you need to move it, just reply on that thread — don't leave the tech a voicemail. Looking forward to getting you a real reading. Thanks, [Name].”</p>
+  </div>
+
+  <h2>4. Confirmation texts and the on-site presentation</h2>
+  <h3>Confirmation text (send immediately, lowercase is fine)</h3>
+  <div class="sms">hey [name] — recap from our call.
+
+[day] at [time] we'll have a technician at [address] to test your well and show you the results in person. please have [spouse] there too so you both hear the same reading.
+
+we won't guess your system on the phone. if iron is under 9 ppm it's usually our standard dual-tank well system. if it's over 9, we look at the dual-tank with chlorine injection. if it makes sense we'll lock an install date and take the deposit before we leave.
+
+here's a short video on how the visit works: [link]
+
+if you need to move the time, just reply here.</div>
+
+  <h3>Spouse / second-phone text (if they weren't on the set call)</h3>
+  <div class="sms">hi [spouse] — this is [rep] at biscayne water. i just booked a well test at your house with [name] for [day] at [time].
+
+we'll test the well on site and walk you both through the results (the big fork is iron under or over 9 ppm). no hard quote until we have that reading. please plan to be home so you're not getting the recap secondhand.
+
+short video here: [link]</div>
+
+  <h3>Day-before / morning-of reminder</h3>
+  <div class="sms">quick reminder — we're coming tomorrow / today at [time] to test the well at [address]. please make sure we can get to the well and the equipment area, and that both of you can be there for the results. reply here if anything changed.</div>
+
+  <h3>Short tech on-site presentation flow</h3>
+  <ol>
+    <li><strong>Open.</strong> “Thanks for having us. I'm going to test the well first, show you the actual numbers, and then I'll tell you what I would put in my own house with this reading. I won't start with a pitch.”</li>
+    <li><strong>Test and show live.</strong> Walk them to the sample. Point to iron ppm, plus hardness / sulfur / anything else you measured. Take photos for the file.</li>
+    <li><strong>Unsell what they don't need.</strong> “You're not a mystery. At [X] ppm iron, you do not need [the heavier / the lighter] setup just because it's more expensive / cheaper. Here's what this reading actually calls for.”</li>
+    <li><strong>Prescribe from the 9 ppm rule.</strong> Under 9: standard Dual Tank Well Water Package — list price <strong>$4,992</strong> (site / quote6). Over 9: dual tank + chlorine injection — <strong>[PRICE]</strong>, fill in only the official number, never a guess. If they also want drinking water at a dedicated faucet, the tankless RO add-on is <strong>$1,550</strong>.</li>
+    <li><strong>A or B, then two install dates.</strong> “Based on this reading I'd put you on [standard / comprehensive]. If you want the drinking-water faucet too, we add the RO. Would you rather [A] or [B]? I can install [Day 1] or [Day 2]. Which is better?” Two dates on sales calls already win 64%. Qualified calls with an ask win 48%; three or more asks win 65%. Do not leave after one soft try.</li>
+    <li><strong>Price as cash and as a monthly delta.</strong> For the standard well package, the site finances it at <strong>$139/month for 36 months at 0%</strong>. Current payment menu (Nov 11): $0 down, 0% for up to 36 months, terms 60–84 months; HSA save around 20%; pre-pay and save $500. Run Affirm or US Bank live. Do not say “I'll send the financing link later.”</li>
+    <li><strong>Deposit + date before leaving.</strong> Confirm with Chad whether this well close uses the site’s <strong>$499 (10%)</strong> well deposit or the current <strong>50%</strong> Floridian practice. Either way, do not send a link with no install date — only 1 of 7 of those Floridian 50% links paid. If they need a beat: hold the two dates until [clock time] and set a real callback. If they are “busy,” leave first and lock that callback now.</li>
+  </ol>
+
+  <h2>5. Stop saying, and the numbers to track</h2>
+  <div class="card">
+    <h3>Stop saying</h3>
+    <ul class="stop">
+      <li>“It's $4,992” or “$139 a month” on the first call, before a test.</li>
+      <li>“Let me email you a quote” / “I'll send a deposit link, no rush.”</li>
+      <li>“The test is free” or any invented trip fee, unless Chad has written the policy. Use [TEST FEE] or confirm with the office.</li>
+      <li>“You can just tell your husband/wife later.” That created 54 spouse stalls in October.</li>
+      <li>“I'll try you later” with no clock time. Leave first, book the callback.</li>
+      <li>“Come on out and we'll see” with no intention that the visit can close.</li>
+      <li>“Lifetime warranty.” Current terms taught in November: valve / tank / resin 10 years, carbon and labor 1 year, $99.95 trip fee after year 1.</li>
+      <li>Guessing iron or pitching chlorine injection without a reading. Test first. That is already the written well-water rep rule (Nov 4).</li>
+    </ul>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>KPI</th>
+        <th>Why it matters</th>
+        <th>Target</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Speed to first dial</strong></td>
+        <td>Under 5 minutes closes 17–19% vs ~10% at 5 min–2 hours</td>
+        <td>Median first dial under 5 minutes on well leads</td>
+      </tr>
+      <tr>
+        <td><strong>Set-to-test booking rate</strong></td>
+        <td>The setter's job is a booked test, not a mailed quote</td>
+        <td>Track weekly; every well conversation ends in a test or a clock-time callback</td>
+      </tr>
+      <tr>
+        <td><strong>Both decision makers home</strong></td>
+        <td>54 spouse stalls in October; one-person visits become relay sales</td>
+        <td>No test visit runs the close with one decision maker missing</td>
+      </tr>
+      <tr>
+        <td><strong>Two time options offered</strong></td>
+        <td>Two dates already win 64% on sales calls</td>
+        <td>Default on every set and every in-home close</td>
+      </tr>
+      <tr>
+        <td><strong>In-home ask + deposit with a date</strong></td>
+        <td>Asks win 48%, 3+ asks win 65%; 50% links with no date paid 1 of 7</td>
+        <td>Price is presented on site; deposit and install date move together</td>
+      </tr>
+      <tr>
+        <td><strong>Empty exits and 3-day closes</strong></td>
+        <td>72% of calls currently end with no next step; 90% of closes happen within 3 days (60% same day)</td>
+        <td>No well set or visit dies into “think about it”; urgency is real in days 1–3</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    Sources: Video 1 transcript, <a href="https://youtu.be/HFPrWE8JAIU">I Paid Alex Hormozi $24k To Grow My Concrete Business</a> (Tyler Link, Aug 28, 2025); Chad's well-water motion (iron &lt;9 ppm vs &gt;9 ppm with chlorine injection); Viktor / Slack through Nov 12, 2026 (#admin, #dispatching, #invoicing) including the Nov 4 well-test-first rule, Nov 5 KB, Nov 9 coaching tape, Nov 11 payment options, and Nov 12 close-rate metrics; official Dual Tank Well Water list price $4,992 / $139 mo / $499 quiz deposit from the site quote and quiz routing. Chlorine-injection list price and the well-test visit fee were not found in Slack and are marked [PRICE] and [TEST FEE].
+  </div>
+
+</div>
+</body>
+</html>
