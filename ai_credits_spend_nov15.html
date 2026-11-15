@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biscayne Water: AI, credits, and API spend</title>
+<style>
+  @page {
+    size: letter;
+    margin: 0.42in;
+    background: #0b0f14;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0b0f14;
+    color: #e6edf3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 18px 16px 28px;
+    background: #0b0f14;
+  }
+  .badge {
+    display: inline-block;
+    background: #3f1d1d;
+    color: #fca5a5;
+    border: 1px solid #7f1d1d;
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  h1 {
+    margin: 0 0 6px;
+    font-size: 24px;
+    line-height: 1.15;
+    color: #fff;
+  }
+  .subtitle {
+    margin: 0 0 16px;
+    color: #94a3b8;
+    font-size: 12.5px;
+  }
+  h2 {
+    margin: 20px 0 8px;
+    font-size: 16px;
+    color: #60a5fa;
+    border-left: 3px solid #3b82f6;
+    padding-left: 10px;
+    page-break-after: avoid;
+  }
+  h3 {
+    margin: 12px 0 6px;
+    font-size: 13.5px;
+    color: #f8fafc;
+    page-break-after: avoid;
+  }
+  p { margin: 0 0 8px; color: #cbd5e1; }
+  ul, ol { margin: 0 0 10px; padding-left: 20px; color: #cbd5e1; }
+  li { margin: 0 0 5px; }
+  .cards { display: flex; gap: 10px; margin: 12px 0 16px; }
+  .card {
+    flex: 1;
+    background: #131a26;
+    border: 1px solid #1f2a3b;
+    border-radius: 12px;
+    padding: 12px;
+    page-break-inside: avoid;
+  }
+  .num { font-size: 22px; font-weight: 800; line-height: 1.1; color: #fff; }
+  .num.r { color: #f87171; }
+  .num.y { color: #fbbf24; }
+  .num.g { color: #4ade80; }
+  .lab { font-size: 11px; color: #9fb0c6; margin-top: 5px; line-height: 1.3; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    margin: 8px 0 12px;
+  }
+  th, td {
+    text-align: left;
+    padding: 6px 7px;
+    border-bottom: 1px solid #1f2a3b;
+    vertical-align: top;
+    color: #cbd5e1;
+  }
+  th { color: #9fb0c6; font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.03em; }
+  td:first-child { color: #f8fafc; font-weight: 700; }
+  .keep { color: #4ade80; font-weight: 700; }
+  .trim { color: #fbbf24; font-weight: 700; }
+  .cut { color: #f87171; font-weight: 700; }
+  .box {
+    background: #131a26;
+    border: 1px solid #1f2a3b;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin: 8px 0 12px;
+    page-break-inside: avoid;
+  }
+  .box.red { border-left: 3px solid #f87171; }
+  .box.green { border-left: 3px solid #4ade80; }
+  .box.amber { border-left: 3px solid #fbbf24; }
+  .prompt {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin: 0 0 8px;
+    color: #e2e8f0;
+    font-size: 12px;
+    page-break-inside: avoid;
+  }
+  .prompt b { color: #93c5fd; }
+  .foot {
+    margin-top: 16px;
+    padding-top: 8px;
+    border-top: 1px solid #1f2a3b;
+    font-size: 10px;
+    color: #6b7a90;
+  }
+  .note { font-size: 11px; color: #94a3b8; }
+  strong { color: #f8fafc; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="badge">Cut spend · read-only review · Nov 15, 2026</div>
+<h1>AI, credits, and API spend</h1>
+<p class="subtitle">Biscayne Water · for the Home Service Millionaires group · numbers from Mercury card alerts, Anthropic and Viktor receipts in info@biscaynewater.com, and Viktor’s #admin Pulse. Times are America/New_York. Nothing here was guessed.</p>
+
+<div class="cards">
+  <div class="card">
+    <div class="num r">$1,973</div>
+    <div class="lab">Anthropic API reloads in 14 days (42 charges). October was $1,102 for the whole month.</div>
+  </div>
+  <div class="card">
+    <div class="num y">$1,900</div>
+    <div class="lab">Viktor.com top-ups Nov 1–10 on Mercury 2378. Nine $100 reloads plus one $1,000 dump.</div>
+  </div>
+  <div class="card">
+    <div class="num">$566</div>
+    <div class="lab">Easy first cut if unused: Atlassian, Foreplay, Manychat, and Merchynt. Viktor already flagged this.</div>
+  </div>
+</div>
+
+<div class="box red">
+  <p><strong>The simple story:</strong> two credit meters are on fire, plus a $275/mo Claude Team plan. Viktor does not know which tool is draining Anthropic. Claude Team seats are <em>not</em> those 42 reloads. Grok Bot, Viktor, and Claude are all doing company work at the same time.</p>
+</div>
+
+<h2>1. What we are spending</h2>
+<p class="note">“Last 30d” for the software stack is Viktor’s Pulse for Sep 26–Oct 25, 2026, from Mercury. Newer card charges are called out in Trend. Cards: Mercury credit 2378 is the main one. 1611 is an older credit card. 2658 is a debit card. 7698 is Edward’s credit card.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Cost</th>
+      <th>Card</th>
+      <th>Source</th>
+      <th>Trend</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Anthropic API auto-reloads</td>
+      <td>$1,102 in Oct<br>$1,973 in 14 days<br>$875 in 19 reloads on Nov 2</td>
+      <td>Historically 2378, 1611. Nov line items not in email</td>
+      <td>Viktor Pulse Nov 2 and Nov 15, Mercury. No Nov receipts in info@</td>
+      <td class="cut">Up hard. Avg ~$47 per reload</td>
+    </tr>
+    <tr>
+      <td>Claude Team seats</td>
+      <td>$275/mo (11 × $25)</td>
+      <td>Debit 2658 (was Mastercard 4039, which failed Sep 26)</td>
+      <td>Anthropic receipt #2382-4802-7407, Oct 26, period Oct 26–Nov 26</td>
+      <td>Seats grew 8→11 since Sep. Steady monthly bill, not the 42 reloads</td>
+    </tr>
+    <tr>
+      <td>Viktor.com credits</td>
+      <td>$2,700 in Sep 26–Oct 25 (17 × $100 + one $1,000)<br>$1,900 already Nov 1–10</td>
+      <td>2378 (was 1611 in Sep)</td>
+      <td>Mercury alerts + Viktor.com Stripe receipts to info@. Pulse $3.0K in the Oct 7–Nov 5 overhead view</td>
+      <td class="trim">Still burning ~$100 a day, then a $1,000 top-up on Nov 10</td>
+    </tr>
+    <tr>
+      <td>xAI / Grok</td>
+      <td>$100 seen once (Nov 11). Ultra plan usage is 48.9% of this week’s shared limit</td>
+      <td>2378 for the $100. Ultra dollar amount not in info@</td>
+      <td>Mercury alert Nov 11, 12:09 PM ET. Viktor Pulse Nov 12 called it a new subscription. Grok Bot usage screen Nov 15</td>
+      <td>New. Weekly limit resets Wed, Nov 18, 12:09 PM ET. $0 extra credits left</td>
+    </tr>
+    <tr>
+      <td>ZeroSettle (iMessage line)</td>
+      <td>Unknown dollar amount</td>
+      <td>Unknown</td>
+      <td>Viktor Pulse Nov 12: “new xAI and ZeroSettle subscriptions.” No invoice in info@</td>
+      <td>New. Amount unknown</td>
+    </tr>
+    <tr>
+      <td>Zapier</td>
+      <td>$149.31 on Oct 5, then $193.50 on Nov 5</td>
+      <td>2378</td>
+      <td>Mercury alerts. Pulse had $149 for Sep 26–Oct 25</td>
+      <td class="trim">Up $44 month to month (task usage)</td>
+    </tr>
+    <tr>
+      <td>Close (CRM + calling credits)</td>
+      <td>$2,183 in Sep 26–Oct 25</td>
+      <td>2378 (Oct 15 $1,490 seats; Oct 19 $130.48; Oct 22 $115.72)</td>
+      <td>Viktor Pulse + Mercury</td>
+      <td>Needed. Usage credits sit on top of seats</td>
+    </tr>
+    <tr>
+      <td>Housecall Pro</td>
+      <td>$636 in Sep 26–Oct 25; $679 charged Nov 4</td>
+      <td>2378</td>
+      <td>Viktor Pulse + Mercury Nov 4</td>
+      <td>Needed for jobs. Slightly up</td>
+    </tr>
+    <tr>
+      <td>PandaDoc</td>
+      <td>$465 in Sep 26–Oct 25 ($270 + $195 on Oct 22)</td>
+      <td>2378</td>
+      <td>Mercury + Pulse</td>
+      <td>Two charges same night. Check seats</td>
+    </tr>
+    <tr>
+      <td>Atlassian (incl. Loom)</td>
+      <td>$192 on Nov 6 (same as Pulse $192)</td>
+      <td>2378</td>
+      <td>Mercury + Atlassian invoice IN-008-932-051 (first try declined Nov 1, then paid)</td>
+      <td class="cut">Viktor says cancel if unused</td>
+    </tr>
+    <tr>
+      <td>Foreplay</td>
+      <td>$175.99 on Oct 17</td>
+      <td>Edward’s 7698</td>
+      <td>Mercury alert. Pulse $176</td>
+      <td class="cut">Viktor says cancel if unused</td>
+    </tr>
+    <tr>
+      <td>Manychat</td>
+      <td>$99 Business plan, Oct 23–Nov 23, paid</td>
+      <td>Billed to info@. Card not in the invoice body</td>
+      <td>Manychat invoice 5442522-4</td>
+      <td class="cut">Viktor says cancel if unused. Renews Nov 23</td>
+    </tr>
+    <tr>
+      <td>Merchynt</td>
+      <td>$99 in the Sep 26–Oct 25 Pulse</td>
+      <td>Not seen in the Mercury alert set we pulled</td>
+      <td>Viktor Pulse only</td>
+      <td class="cut">Viktor says cancel if unused</td>
+    </tr>
+    <tr>
+      <td>Kixie</td>
+      <td>$1,290 attempted</td>
+      <td>1611, declined Oct 17, 22, and 24</td>
+      <td>Kixie billing emails in spam/inbox</td>
+      <td class="cut">Overlaps Close calling. May already be off because the card failed</td>
+    </tr>
+    <tr>
+      <td>GoHighLevel</td>
+      <td>$97/mo last known</td>
+      <td>Card on file failed Oct 26</td>
+      <td>Travis Murray email Oct 26: account still on, payment didn’t go through. No November receipt in info@</td>
+      <td class="cut">Team stopped using it Nov 13. Confirm it is canceled so it cannot retry</td>
+    </tr>
+    <tr>
+      <td>Sendblue</td>
+      <td>Old charges: $2,317.50 Jul 20, $485.77 Jul 22, $1,802.50 Aug 27</td>
+      <td>1611</td>
+      <td>Mercury alerts. No Sep–Nov Sendblue alert found in this inbox pull</td>
+      <td>Current monthly unknown. Viktor still lists a Sendblue connection</td>
+    </tr>
+    <tr>
+      <td>Google Workspace, Slack, CallRail, QuickBooks</td>
+      <td>Workspace $516 · Slack $125.70 (Oct 20) · CallRail $258 · QBO $111 (Pulse window)</td>
+      <td>Slack on 2378</td>
+      <td>Pulse + Mercury (Slack)</td>
+      <td>Keep. Viktor said keep CallRail for postcards</td>
+    </tr>
+    <tr>
+      <td>HeyGen, ElevenLabs, Metricool, ChatGPT/OpenAI, Cursor, Midjourney, Perplexity, Otter, Fathom, Canva</td>
+      <td>No receipts found in info@</td>
+      <td>—</td>
+      <td>Gmail search of info@, Nov 15</td>
+      <td>Unknown if someone pays on a personal card</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>2. Keep, trim, or cut</h2>
+
+<div class="box green">
+  <h3 class="keep">Absolutely necessary</h3>
+  <ul>
+    <li><strong>Close</strong> — this is the sales CRM. Keep it. Watch the extra calling credits on top of the $1,490 seat bill.</li>
+    <li><strong>Housecall Pro</strong> — jobs and installs. Keep it.</li>
+    <li><strong>Zapier</strong> — lead routing still runs here. Keep it, but trim fat zaps. It went from $149.31 to $193.50.</li>
+    <li><strong>Google Workspace, Slack, CallRail</strong> — day-to-day tools. Keep CallRail for postcards, per Viktor.</li>
+    <li><strong>One AI helper for ops</strong> — you need a bot. You do not need three credit meters running hot at once.</li>
+  </ul>
+</div>
+
+<div class="box amber">
+  <h3 class="trim">Keep, but trim</h3>
+  <ul>
+    <li><strong>Viktor.com</strong> — useful (Pulse, dispatch flags, quotes). $1,900 in 10 days is too much. Put a daily cap on, use cheap models for routine work, and paste the prompts in section 5.</li>
+    <li><strong>Anthropic API auto-reloads</strong> — this is the spike. $875 hit in one morning (Nov 2). Turn on a spend cap. Find the key or workspace that is burning it. Do not leave auto-reload unlimited.</li>
+    <li><strong>Claude Team ($275/mo, 11 seats)</strong> — keep if reps use the company Claude project. Cut seats nobody logs into. This bill is separate from the API reloads.</li>
+    <li><strong>PandaDoc ($465)</strong> — two charges on the same night. Check if both products or seat counts are needed.</li>
+    <li><strong>xAI / Grok Bot</strong> — new $100 company-card charge. Ultra weekly usage is already 48.9%, and extra credits are $0. Don’t point the same jobs at Grok, Viktor, and Claude.</li>
+    <li><strong>ZeroSettle</strong> — needed if you want the group iMessage line. Dollar amount is still unknown. Get the invoice.</li>
+  </ul>
+</div>
+
+<div class="box red">
+  <h3 class="cut">Redundant / cut (if still unused)</h3>
+  <ul>
+    <li><strong>Atlassian $192 + Foreplay $175.99 + Manychat $99 + Merchynt $99 = $566 / 30 days.</strong> Viktor already called this the easiest lever. Manychat renews Nov 23, 2026.</li>
+    <li><strong>Kixie $1,290</strong> — overlaps Close calling. The 1611 card was declined three times in October. Confirm it is canceled so it cannot suddenly clear.</li>
+    <li><strong>GoHighLevel $97/mo</strong> — you stopped using it Nov 13. The Oct $97 payment failed, and Travis said the account was still on. Cancel it for real.</li>
+  </ul>
+  <p>If those unused tools and GHL are actually off, that’s about <strong>$663/mo</strong>. If Kixie would have billed, add up to <strong>$1,290</strong>. The bigger money is the Anthropic spike: if the last 14 days kept up, that’s about <strong>$4,200 per 30 days</strong> vs $1,102 in October (that 30-day figure is a run-rate estimate, not a bill you have already paid).</p>
+</div>
+
+<h2>3. Overlaps (you are paying twice for the same job)</h2>
+<ul>
+  <li><strong>Too many brains:</strong> Viktor has its own $100 credit top-ups <em>and</em> a Claude connection. Claude Team has 11 seats. The Anthropic API is auto-reloading. Grok Bot / xAI is now on the company card. Chad also set up a daily Claude + Close automation (Oct 13, #admin). Same kind of work, four pipes.</li>
+  <li><strong>Calling:</strong> Close calling credits plus Kixie ($1,290 attempts). Pick one.</li>
+  <li><strong>CRM leftover:</strong> Close is live. GHL was the old CRM. Don’t let a $97 GHL bill come back.</li>
+  <li><strong>Chat tools:</strong> Manychat vs other Instagram / Messenger setups. If Manychat is idle, cut it before Nov 23.</li>
+  <li><strong>Stryker pages</strong> were guessed as the Anthropic cause. In Slack, Stryker Design is an SEO / design vendor (~$3,090), not a proven Anthropic API user. Don’t cut Stryker to fix this line until someone shows those pages calling Anthropic.</li>
+</ul>
+
+<h2>4. Top actions, ranked</h2>
+<ol>
+  <li><strong>Cap Anthropic today.</strong> Open platform.claude.com/settings/billing and claude.ai Settings → Usage. Set a spend limit. If a job is stuck in a loop, turn auto-reload off so it stops at $0. Then see which API key or workspace ate the credits.</li>
+  <li><strong>Ask Viktor for the Mercury list</strong> (date, amount, card last 4) for every Anthropic and Viktor.com charge since Oct 1. Also ask if Viktor’s Claude connection bills the company Anthropic account or only Viktor.com credits.</li>
+  <li><strong>Put a daily / monthly cap on Viktor.com credits</strong> and paste the prompts in section 5. No more silent $1,000 top-ups.</li>
+  <li><strong>Cancel the $566 stack if unused</strong> (Atlassian, Foreplay, Manychat, Merchynt). Kill GHL for real. Confirm Kixie is dead.</li>
+  <li><strong>Count Claude Team seats.</strong> Drop seats nobody uses. Don’t confuse this $275 bill with the API reloads.</li>
+  <li><strong>Pick one default AI for ops work</strong> (Viktor or Grok or Claude, not all three on the same task). Point Chad’s Close automation at a cheap model and a spend cap.</li>
+  <li><strong>Trim Zapier tasks</strong> so the bill does not keep climbing past $193.50.</li>
+</ol>
+
+<h2>5. Prompts to program into Viktor</h2>
+<p>Copy these in as standing rules. The goal is less credit burn, not worse work.</p>
+
+<div class="prompt"><b>1. Daily cap.</b> Do not spend more than $40 of Viktor credits in a day unless Doug or AG says yes in Slack first. If you are about to cross the cap, stop and post a one-line warning in #admin with what’s left to do.</div>
+<div class="prompt"><b>2. Cheap model first.</b> Use the cheapest model that can do the job for Pulse recaps, job flags, list cleanups, and short answers. Save the big model for money decisions, legal wording, or when someone asks you to think harder.</div>
+<div class="prompt"><b>3. One Pulse, not ten.</b> Run the Daily Financial Pulse once each morning. Do not rebuild the full report when one number changes. Patch that line only. Batch similar asks into one run.</div>
+<div class="prompt"><b>4. Don’t re-read the world.</b> Do not re-pull all of Mercury, Drive, Slack, Close, and Gmail on every question. Reuse the last good pull if it is under 12 hours old, and say the as-of time. Only refresh a source when the question needs new data.</div>
+<div class="prompt"><b>5. Ask before heavy jobs.</b> Before any job that will transcribe long Looms, read hundreds of calls, crawl many docs, or likely cost over $20 in credits, post the plan and a cost guess in #admin and wait for a yes.</div>
+<div class="prompt"><b>6. Report your own use.</b> At the end of each Pulse, add one line: Viktor credits used today, remaining balance, and Anthropic card charges in the last 24 hours (count and dollars) from Mercury. If Anthropic has more than 3 reloads in a day, ping Doug and AG the same day.</div>
+<div class="prompt"><b>7. Cache and point, don’t paste.</b> When a knowledge base or quote file already exists, link to the current file. Do not rebuild or re-embed the whole packet unless the facts changed.</div>
+<div class="prompt"><b>8. No silent $1,000 reloads.</b> If a Viktor auto top-up over $100 is about to fire, warn #admin first. Prefer a $100 top-up over a $1,000 top-up unless someone asked for the larger one.</div>
+<div class="prompt"><b>9. Don’t double-call Claude.</b> If a task can be done with your own tools, do not also send it through the company Anthropic API or a second Claude project. One pass is enough.</div>
+<div class="prompt"><b>10. Stop on loops.</b> If a tool errors or you get the same result three times, stop. Do not retry in a tight loop. Post the error and wait.</div>
+
+<h2>6. What’s still unknown</h2>
+<ul>
+  <li>Which Anthropic API key, workspace, or Claude usage-credit setting caused the 42 reloads. Viktor said he does not know.</li>
+  <li>The exact Nov Anthropic card last-4s and each reload amount (no November Anthropic or Mercury-Anthropic emails in info@). October API buys on 2378 were $200 on Oct 19 and Oct 27.</li>
+  <li>ZeroSettle’s price. No invoice in info@.</li>
+  <li>The dollar price of the Grok Ultra plan (only the $100 xAI card charge and the 48.9% weekly usage are known here).</li>
+  <li>Cortana / Visionary Creations software fee (Viktor mapped the vendor; the fee itself was not in this email pull).</li>
+  <li>Whether Sendblue is still billing. Whether HeyGen, ElevenLabs, Metricool, ChatGPT, Cursor, or other AI tools are on a personal card.</li>
+  <li>Zapier task counts (the Zapier connector here cannot show billing; we only have the Mercury totals).</li>
+</ul>
+
+<div class="foot">
+  Prepared Nov 15, 2026, 9:50 AM ET · Sources: Viktor #admin Pulse (C0C1LQMR0BS) Nov 2, 6, 12, 14, and 15; Mercury card alerts to info@biscaynewater.com; Anthropic receipts (Team #2382-4802-7407 and the Sep 9 $100 credit purchase #2849-5632-0641); Viktor.com Stripe receipts; Manychat invoice 5442522-4; Kixie decline emails; Travis Murray GHL email Oct 26; Grok Bot usage as of Nov 15. This was a read-only review. No messages were sent.
+</div>
+
+</div>
+</body>
+</html>
