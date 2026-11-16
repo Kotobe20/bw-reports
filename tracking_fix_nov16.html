@@ -1,0 +1,224 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biscayne Water: Close to Cortana to Meta tracking fix (Nov 16)</title><style>
+  @page {
+    size: letter;
+    margin: 0.42in;
+    background: #0b0f14;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0b0f14;
+    color: #e6edf3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 18px 16px 28px;
+    background: #0b0f14;
+  }
+  .badge {
+    display: inline-block;
+    background: #3f1d1d;
+    color: #fca5a5;
+    border: 1px solid #7f1d1d;
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  h1 {
+    margin: 0 0 6px;
+    font-size: 24px;
+    line-height: 1.15;
+    color: #fff;
+  }
+  .subtitle {
+    margin: 0 0 16px;
+    color: #94a3b8;
+    font-size: 12.5px;
+  }
+  h2 {
+    margin: 20px 0 8px;
+    font-size: 16px;
+    color: #60a5fa;
+    border-left: 3px solid #3b82f6;
+    padding-left: 10px;
+    page-break-after: avoid;
+  }
+  h3 {
+    margin: 12px 0 6px;
+    font-size: 13.5px;
+    color: #f8fafc;
+    page-break-after: avoid;
+  }
+  p { margin: 0 0 8px; color: #cbd5e1; }
+  ul, ol { margin: 0 0 10px; padding-left: 20px; color: #cbd5e1; }
+  li { margin: 0 0 5px; }
+  .cards { display: flex; gap: 10px; margin: 12px 0 16px; }
+  .card {
+    flex: 1;
+    background: #131a26;
+    border: 1px solid #1f2a3b;
+    border-radius: 12px;
+    padding: 12px;
+    page-break-inside: avoid;
+  }
+  .num { font-size: 22px; font-weight: 800; line-height: 1.1; color: #fff; }
+  .num.r { color: #f87171; }
+  .num.y { color: #fbbf24; }
+  .num.g { color: #4ade80; }
+  .lab { font-size: 11px; color: #9fb0c6; margin-top: 5px; line-height: 1.3; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    margin: 8px 0 12px;
+  }
+  th, td {
+    text-align: left;
+    padding: 6px 7px;
+    border-bottom: 1px solid #1f2a3b;
+    vertical-align: top;
+    color: #cbd5e1;
+  }
+  th { color: #9fb0c6; font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.03em; }
+  td:first-child { color: #f8fafc; font-weight: 700; }
+  .keep { color: #4ade80; font-weight: 700; }
+  .trim { color: #fbbf24; font-weight: 700; }
+  .cut { color: #f87171; font-weight: 700; }
+  .box {
+    background: #131a26;
+    border: 1px solid #1f2a3b;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin: 8px 0 12px;
+    page-break-inside: avoid;
+  }
+  .box.red { border-left: 3px solid #f87171; }
+  .box.green { border-left: 3px solid #4ade80; }
+  .box.amber { border-left: 3px solid #fbbf24; }
+  .prompt {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin: 0 0 8px;
+    color: #e2e8f0;
+    font-size: 12px;
+    page-break-inside: avoid;
+  }
+  .prompt b { color: #93c5fd; }
+  .foot {
+    margin-top: 16px;
+    padding-top: 8px;
+    border-top: 1px solid #1f2a3b;
+    font-size: 10px;
+    color: #6b7a90;
+  }
+  .note { font-size: 11px; color: #94a3b8; }
+  strong { color: #f8fafc; }
+
+code{background:#131a26;border:1px solid #1f2a3b;border-radius:4px;padding:0 4px;font-size:10.5px;color:#e2e8f0;word-break:break-all}
+.box{background:#131a26;border:1px solid #1f2a3b;border-radius:10px;padding:10px 12px;margin:8px 0 12px}
+</style></head><body><div class="container">
+<div class="badge">Tracking fix · Nov 16, 2026</div>
+<h1>Close → Cortana → Meta: what got fixed, what's blocked</h1>
+<p class="subtitle">Status as of 1:35 PM ET, Mon Nov 16. Everything below was read or changed through the Zapier connection to Close ("Biscayne Water | RevPilot Team") and Zapier Manager. Grok Bot can't log in to Cortana or Meta.</p>
+<div class="cards">
+<div class="card"><div class="num g">6</div><div class="lab">Close $0 deals fixed (5 deleted copies, 1 value set)</div></div>
+<div class="card"><div class="num y">13</div><div class="lab">$0 deals left that need a decision or the Cortana fix first</div></div>
+<div class="card"><div class="num r">3</div><div class="lab">Zaps that make empty copies (04, 05, 06), confirmed by reading their steps</div></div>
+<div class="card"><div class="num r">0</div><div class="lab">Cortana and Meta changes made, because they need a logged-in browser</div></div>
+</div>
+
+<h2>1. What I changed in Close (with proof)</h2>
+<p>Before deleting, I checked that each lead still has its real deal with a value and the same stage. Backups are in <code>/workspace/tracking_fix/close_backup_before_changes.json</code>.</p>
+<table><tr><th>Lead</th><th>Change</th><th>Opportunity removed or changed</th><th>Real deal kept</th><th>Zapier run</th></tr>
+<tr><td>Alejandro Moreno</td><td>Deleted the $0 copy (Job Complete, 11/13)</td><td><code>oppo_Qp632WxlbZzM5BXJkLkJLTPfUvpoOmEG3IFIEAmvaGA</code></td><td>$3,492 Job Complete 11/11 <code>oppo_4avFwRy3…KIXh6</code></td><td>run_9c32787d</td></tr>
+<tr><td>Eric Garro</td><td>Deleted the $0 copy (Job Complete, 10/14)</td><td><code>oppo_fdoWwgxBvXKlWXHGdVSS9oOD07ei6g8x1EBBgQKvyHN</code></td><td>$3,200 Job Complete 10/5 <code>oppo_Zd8OI1WF…Jtg7Eb</code></td><td>run_75ffc1d6</td></tr>
+<tr><td>Andres Masvidal</td><td>Deleted the $0 copy (Job Complete, 10/12)</td><td><code>oppo_m1Pq3S0xilZy2VBEregZLSWVnG2GeSOTJeXKChTLNuB</code></td><td>$3,772 Job Complete 10/3 <code>oppo_5pTQVZqs…z4H15O</code></td><td>run_342b2023</td></tr>
+<tr><td>Austin Miles</td><td>Deleted the $0 copy (Job Complete, 10/4)</td><td><code>oppo_9L2kqgpYKSoCukP3jeaIdC1IodfRBBnYzTPkorexkPB</code></td><td>$3,200 Job Complete 10/3 <code>oppo_oRb9W8Ns…dqf5HB</code></td><td>run_2e4ccd2e</td></tr>
+<tr><td>Jorge Valdes</td><td>Deleted the $0 copy (Job Complete, 9/30)</td><td><code>oppo_20L5EGodagrtkFHysCAjWcBpAbe4eCChy1NNAlC165J</code></td><td>$2,950 Job Complete 9/21 <code>oppo_tVUeaZQX…7PVbJ3</code></td><td>run_724bfcb9</td></tr>
+<tr><td>Leonard Irving</td><td>Value $0 → $3,400 (from the lead's Sales Price, which is the Sold card's Quote field)</td><td><code>oppo_2Rfn4cejh9ci5hbjMk9enIr1jjgQ1VXZufmCFfFeou9</code>, still in Contract Sent</td><td>(only deal)</td><td>run_1221ec73</td></tr>
+</table>
+<p>After the changes, Close shows 213 opportunities created since Sep 1, down from 218.</p>
+
+<h2>2. The 13 $0 deals still in Close</h2>
+<h3>a) Waiting until the Cortana trigger moves off "Job Complete" (2)</h3>
+<p>Both deals are in Job Complete, which is what Cortana listens to right now. If I set their value before the trigger changes, Cortana might record another sale. I don't know whether it fires on value edits, so I held these.</p>
+<table><tr><th>Lead</th><th>Opportunity</th><th>Set value to</th></tr>
+<tr><td>Aaron (954-849-1775)</td><td><code>oppo_xQbq7BPhY255QNT6qNEJlArJKfFqI5CT3OefbzBs93G</code></td><td>$1,200 (Sales Price)</td></tr>
+<tr><td>Shaun Patel</td><td><code>oppo_V3jb7e67qGu4mGX6TZrFYVQiGFYBHWDXIt0cz0gNx6F</code></td><td>$3,777 (Sales Price)</td></tr></table>
+<h3>b) No price on file (2)</h3>
+<table><tr><th>Lead</th><th>Opportunity</th><th>Stage</th></tr>
+<tr><td>Elizabeth</td><td><code>oppo_2qxamuqFXvhtj07pCOpv3elPm7qkZzzpin20hmBg1ND</code></td><td>Contract Signed (only deal, Sales Price is blank)</td></tr>
+<tr><td>Alex Dena</td><td><code>oppo_uUIrtZncO0agCznUUEl1z2YUrmXrPWqdKS85TlAPBcA</code></td><td>Contract Sent (only deal, Sales Price is blank). AG's plan says this was a Not Sold that ended up in a sale stage. If so, it should be Deal Lost, not given a value.</td></tr></table>
+<h3>c) Copies where the stages disagree (9). Need AG or sales to pick which stage is right</h3>
+<p>Each lead has a real deal with a value, plus a later $0 copy in a different stage. Deleting the copy would also delete the newer stage, so I left them alone.</p>
+<table><tr><th>Lead</th><th>Real deal</th><th>$0 copy</th></tr>
+<tr><td>Yeni Rodriguez</td><td>$3,777 Job Complete (10/2)</td><td>Contract Signed 10/19 <code>oppo_d3YB9KIL…c2hYa3</code></td></tr>
+<tr><td>Sharon Sizemore</td><td>$4,992 Job Complete (10/16)</td><td>Job Not Complete 10/19 <code>oppo_lgL94QWq…A8ahdl</code></td></tr>
+<tr><td>Nancy Goren Schwartz</td><td>$3,200 Deal Lost (10/6)</td><td>Job Not Complete 10/17 <code>oppo_alEW3ems…KvpGPf</code></td></tr>
+<tr><td>Ignacio Travieso</td><td>$3,250 Deal Lost (10/5)</td><td>Job Not Complete 10/14 <code>oppo_ZC3WFVfM…4eHgLo</code></td></tr>
+<tr><td>Cliff Dean</td><td>$3,900 Deal Lost (10/9)</td><td>Job Not Complete 10/13 <code>oppo_XjuVSFLm…pROsL4</code></td></tr>
+<tr><td>jewels</td><td>$3,492 Deal Lost (10/5)</td><td>Job Not Complete 10/13 <code>oppo_d9mC3f07…LTWUo7</code></td></tr>
+<tr><td>Victor Eduardo</td><td>$3,492 Deal Lost (9/30)</td><td>Job Not Complete 10/9 <code>oppo_PjVWgwW4…5Yk8BA</code></td></tr>
+<tr><td>Eduardo Maeda</td><td>$3,492 Deal Lost (9/30)</td><td>Job Not Complete 10/2 <code>oppo_igOWYpE7…dMnMmw</code></td></tr>
+<tr><td>Issac Pena</td><td>$3,492 Deal Lost (9/26)</td><td>Job Not Complete 9/29 <code>oppo_CmQZGelm…pTb18F</code></td></tr></table>
+<p>Simplest fix for each one: move the real deal to whichever stage is correct, then delete the $0 copy.</p>
+
+<h2>3. Why the copies happen (confirmed from the zap steps)</h2>
+<p>The RevPilot zaps run in the same Zapier account that Grok Bot can reach, so I read each zap's steps directly. To do that, I made disabled copies, read them, and deleted them. The live zaps were never touched.</p>
+<ol>
+<li><b>05 Installation Complete</b> (<a href="https://zapier.com/editor/380215362">380215362</a>) looks for an opportunity that is <i>active</i> and already in <i>Job Complete</i>. Job Complete is a "won" stage, so that search can never match. It creates a new empty opportunity every time and moves it to Job Complete. This is where the blank Job Complete sales come from (Aaron 11/14, Alejandro 11/13).</li>
+<li><b>06 Installation Not Complete</b> (<a href="https://zapier.com/editor/380215694">380215694</a>) looks for an active opportunity already in <i>Job Not Complete Follow Up</i>. If it doesn't find one, it creates an empty one.</li>
+<li><b>04 Agreement Status</b> (<a href="https://zapier.com/editor/380198229">380198229</a>) works the same way. The "Agreement Sent" path looks only for a deal in Contract Sent, and the "Agreement Signed" path looks only for one in Contract Signed. Either path creates a new deal when it doesn't find a match. The Signed path sends a blank value, which explains the $0 Contract Signed deals.</li>
+<li><b>03 Not Sold</b> (<a href="https://zapier.com/editor/380198664">380198664</a>) never creates a deal. It moves the active deal to Deal Lost, which is a "lost" stage. Its Follow Up path sets the lead status to Qualified, the same status the Sold zap sets. I can't see what created Alex Dena's Contract Sent deal on 10/16.</li>
+<li><b>02 Sold</b> (<a href="https://zapier.com/editor/380197575">380197575</a>) only sets the lead to Qualified and the owner. <b>02 Sold PandaDoc</b> (<a href="https://zapier.com/editor/380234494">380234494</a>) sends the PandaDoc agreement and logs "Agreement Sent". It skips that if an Agreement Sent activity was already logged today, so re-saving a Sold card on a later day sends the agreement again. <b>Neither one creates an opportunity.</b> The Sold card opportunity must come from n8n "biscayne-close-to-hcp", which I can't see. That would also be where Aaron's $1,200 RO card failed.</li>
+</ol>
+
+<h2>4. Needs browser (exact steps)</h2>
+<h3>A. Cortana trigger · app.usecortana.ai → business 66386146-c06f-43b3-8b94-b577feb11d76 → Conversion Sources</h3>
+<ol><li>Open the Close purchase source <code>36c5859e-eec0-43f3-b99f-21a014cfb021</code> (it feeds "New Deals Closed" <code>ff4c03ea-0a04-40af-851a-c3bab63347dd</code>).</li>
+<li>Pipeline Sales <code>pipe_25rUKv0IwZ9xXk8pb71CKQ</code>: select ONLY "Install Scheduled / Contract Sent" (<code>stat_l2gKlMUOZDaKwhd49xLPKzgPbuZ3NuuRc70uUOxtwq5</code>). Uncheck Job Complete. Do not add Contract Signed.</li>
+<li>Keep "track revenue" on. Turn "value required" on. Save.</li>
+<li>Then tell Grok Bot so it can set Aaron to $1,200 and Shaun Patel to $3,777 in Close.</li></ol>
+<h3>B. Cortana backfill (Manual Entry, conversion "New Deals Closed")</h3>
+<ul><li>Jorge Ramos, $8,992, Nov 14 (Close deal in Contract Sent, $8,992)</li><li>Vanessa de Zafra, $3,492, Nov 14 (Close deal in Contract Signed, $3,492)</li><li>Desiree Prieto, $3,992, Nov 15 (Close deal in Contract Sent, $3,992)</li><li>Aaron, 954-849-1775, $1,200, Nov 14. Delete his blank 11/14 event first.</li></ul>
+<h3>C. Cortana deletes (keep each customer's FIRST valued event)</h3>
+<p>Use AG's list from message 97702, step 3. Before each delete, open the customer's events. Only delete if a <i>first, valued</i> event stays and the one being deleted is a later copy, blank, or test. If something doesn't match, skip it and note it. I couldn't check any of these because I can't see Cortana.</p>
+<h3>D. Meta CAPI · Cortana CAPI settings (setup 09bf7214-0fe1-4a6d-b679-8d6777084f40, pixel 954126314057751)</h3>
+<ol><li>Purchase mapping: set valueOverride to <b>fallback $5,000</b> (only fills a blank, never replaces a real value).</li><li>Keep the Lead mapping on.</li><li>Meta Events Manager: <a href="https://business.facebook.com/events_manager2/list/pixel/954126314057751/overview">business.facebook.com/events_manager2/list/pixel/954126314057751/overview</a> → Purchase → confirm recent events show a value and aren't marked deduplicated.</li></ol>
+<h3>E. Zapier editor fixes (AG's account, or RevPilot)</h3>
+<ol>
+<li><b>05</b> <a href="https://zapier.com/editor/380215362">editor</a>: in the "Find Opportunity" step, clear the Status filter so it searches any active deal on the lead, and turn OFF "create if not found". Add a filter after it ("only continue if found"). Add a Slack alert path for "no deal found".</li>
+<li><b>06</b> <a href="https://zapier.com/editor/380215694">editor</a>: same changes.</li>
+<li><b>04</b> <a href="https://zapier.com/editor/380198229">editor</a>: on both the Sent and Signed paths, search any active deal on the lead with no status filter and turn off create-if-not-found. On the Signed path, leave value unmapped so it keeps the Sold price. Add the Slack alert when nothing is found.</li>
+<li><b>03</b> <a href="https://zapier.com/editor/380198664">editor</a>: it already never creates deals. Clear "Close Date" and set confidence to 0 on the Deal Lost updates, because those fields are made for won deals.</li>
+<li><b>02 Sold PandaDoc</b> <a href="https://zapier.com/editor/380234494">editor</a>: change the "already sent" check from "today" to "ever" (any Agreement Sent activity on the lead), so a re-saved Sold card doesn't resend the agreement.</li>
+</ol>
+<h3>F. Ask RevPilot (n8n "biscayne-close-to-hcp")</h3>
+<div class="box">Hi RevPilot team, we're fixing Biscayne Water's Close → Cortana tracking. We need 3 changes in n8n "biscayne-close-to-hcp":<br>
+1) When a "Communication Complete (Sold)" card is saved, create exactly one opportunity in Sales / "Install Scheduled / Contract Sent" with value = the card's Quote. Aaron's $1,200 RO Sold card on Nov 14 created none.<br>
+2) If the lead already has an active opportunity, update it and don't create a second one. A re-saved Sold card should change nothing.<br>
+3) Send us the node list (or an export) so we can confirm nothing else creates opportunities. Thanks.</div>
+
+<h2>5. Steps 6 and 7</h2>
+<p>The stored text of message 97702 ends at step 6: "Test lead → So". Step 7 isn't in it, so I can't follow its exact words. I didn't run the end-to-end test sale. It would fire a real Purchase to Meta through Cortana before the trigger and value fixes are in, so it should wait until A, D and E are done. When it's run, name the lead "TEST Grok Bot DELETE" and delete it from Close, Cortana and HCP afterward.</p>
+<p>Canceled sales: I don't know if Cortana can subtract a sale or send a negative value to Meta. Neither is in Cortana's public docs that I found. The daily check below at least flags every cancel, so it can be removed by hand in Cortana.</p>
+
+<h2>6. Proposed daily check routine</h2>
+<div class="box">Every day at 9:00 AM ET, check Biscayne Water's sales tracking and make NO changes. Use the Zapier Close connection "Biscayne Water | RevPilot Team" (Close API GET). In pipeline pipe_25rUKv0IwZ9xXk8pb71CKQ, look at opportunities created or updated in the last 48 hours and flag: (1) any opportunity with value 0; (2) any lead with more than one opportunity that isn't Deal Lost; (3) any opportunity moved to Deal Lost (stat_B74o4DqeHrosuIoMhffPmbvCizsVgwbnFFm6cPrSAUw) in the last 48 hours after it had been in Contract Sent, listing name, value and date so the sale can be removed from Cortana; (4) any "Communication Complete (Sold)" activity (actitype_2uSOauI7rIXmk2JyYLJ66j) in the last 48 hours where the lead has no Contract Sent opportunity, or where the opportunity value doesn't match the lead's Sales Price. With Zapier Manager, also report errors or turned-off states for zaps 380197575, 380234494, 380198664, 380198229, 380242297, 380215362 and 380215694. If anything is flagged, text the Home Service Millionaires V3 group (iMessage;+;chat455313095550566129) a short lowercase numbered list with names, amounts and Close links, with no dashes. If nothing is flagged, send nothing.</div>
+</div></body></html>
