@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biscayne Water: conversion rate best practices (Nov 16)</title><style>
+  @page {
+    size: letter;
+    margin: 0.42in;
+    background: #0b0f14;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0b0f14;
+    color: #e6edf3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 18px 16px 28px;
+    background: #0b0f14;
+  }
+  .badge {
+    display: inline-block;
+    background: #3f1d1d;
+    color: #fca5a5;
+    border: 1px solid #7f1d1d;
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  h1 {
+    margin: 0 0 6px;
+    font-size: 24px;
+    line-height: 1.15;
+    color: #fff;
+  }
+  .subtitle {
+    margin: 0 0 16px;
+    color: #94a3b8;
+    font-size: 12.5px;
+  }
+  h2 {
+    margin: 20px 0 8px;
+    font-size: 16px;
+    color: #60a5fa;
+    border-left: 3px solid #3b82f6;
+    padding-left: 10px;
+    page-break-after: avoid;
+  }
+  h3 {
+    margin: 12px 0 6px;
+    font-size: 13.5px;
+    color: #f8fafc;
+    page-break-after: avoid;
+  }
+  p { margin: 0 0 8px; color: #cbd5e1; }
+  ul, ol { margin: 0 0 10px; padding-left: 20px; color: #cbd5e1; }
+  li { margin: 0 0 5px; }
+  .cards { display: flex; gap: 10px; margin: 12px 0 16px; }
+  .card {
+    flex: 1;
+    background: #131a26;
+    border: 1px solid #1f2a3b;
+    border-radius: 12px;
+    padding: 12px;
+    page-break-inside: avoid;
+  }
+  .num { font-size: 22px; font-weight: 800; line-height: 1.1; color: #fff; }
+  .num.r { color: #f87171; }
+  .num.y { color: #fbbf24; }
+  .num.g { color: #4ade80; }
+  .lab { font-size: 11px; color: #9fb0c6; margin-top: 5px; line-height: 1.3; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    margin: 8px 0 12px;
+  }
+  th, td {
+    text-align: left;
+    padding: 6px 7px;
+    border-bottom: 1px solid #1f2a3b;
+    vertical-align: top;
+    color: #cbd5e1;
+  }
+  th { color: #9fb0c6; font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.03em; }
+  td:first-child { color: #f8fafc; font-weight: 700; }
+  .keep { color: #4ade80; font-weight: 700; }
+  .trim { color: #fbbf24; font-weight: 700; }
+  .cut { color: #f87171; font-weight: 700; }
+  .box {
+    background: #131a26;
+    border: 1px solid #1f2a3b;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin: 8px 0 12px;
+    page-break-inside: avoid;
+  }
+  .box.red { border-left: 3px solid #f87171; }
+  .box.green { border-left: 3px solid #4ade80; }
+  .box.amber { border-left: 3px solid #fbbf24; }
+  .prompt {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin: 0 0 8px;
+    color: #e2e8f0;
+    font-size: 12px;
+    page-break-inside: avoid;
+  }
+  .prompt b { color: #93c5fd; }
+  .foot {
+    margin-top: 16px;
+    padding-top: 8px;
+    border-top: 1px solid #1f2a3b;
+    font-size: 10px;
+    color: #6b7a90;
+  }
+  .note { font-size: 11px; color: #94a3b8; }
+  strong { color: #f8fafc; }
+
+code{background:#131a26;border:1px solid #1f2a3b;border-radius:4px;padding:0 4px;font-size:10.5px;color:#e2e8f0;word-break:break-all}
+.box{background:#131a26;border:1px solid #1f2a3b;border-radius:10px;padding:10px 12px;margin:8px 0 12px}
+
+.sug{display:block;margin-top:4px;padding:5px 8px;background:#2a2110;border-left:3px solid #fbbf24;border-radius:6px;color:#fde68a;font-size:11.5px}
+.sug b{color:#fbbf24}
+.src{color:#7dd3fc;font-size:10.5px}
+.pb{page-break-before:always}
+ol.top>li{margin-bottom:9px}
+.tag{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 6px;border-radius:999px;margin-left:4px}
+.hi{background:#14321f;color:#4ade80;border:1px solid #166534}
+.md{background:#332a10;color:#fbbf24;border:1px solid #854d0e}
+.ez{background:#10243a;color:#7dd3fc;border:1px solid #1e3a5f}
+a{color:#7dd3fc}
+</style></head><body><div class="container">
+<div class="badge" style="background:#14321f;color:#4ade80;border-color:#166534">Conversion rate · Nov 16, 2026</div>
+<h1>Conversion rate playbook from the $100M Sales Teams videos</h1>
+<p class="subtitle">Notes from the 4 videos at the link shared in the group (msg #98345), asked for in msg #98346. Speaker: Alex Hormozi, Acquisition.com (ACQ). I watched them as auto transcripts plus 171 slide screenshots. Everything in white is what the videos say. Everything in <span style="color:#fbbf24">yellow boxes</span> is <b>our suggestion</b> for Biscayne, not something the videos said. Any number below is ACQ's own number about ACQ's team, not a Biscayne number.</p>
+
+<div class="cards">
+<div class="card"><div class="num">4</div><div class="lab">videos, 3 hr 21 min total</div></div>
+<div class="card"><div class="num">171</div><div class="lab">slides captured from the videos</div></div>
+<div class="card"><div class="num g">10</div><div class="lab">actions to start this week (below)</div></div>
+<div class="card"><div class="num y">1</div><div class="lab">thing I couldn't read: the file in msg #98397</div></div>
+</div>
+
+<h2>TL;DR: top 10 actions, ranked</h2>
+<p class="note">Rank = how much it should move sales (from what the videos stress most) × how easy it is for us. <span class="tag hi">BIG</span> = big impact, <span class="tag ez">EASY</span> = can start this week.</p>
+<ol class="top">
+<li><b>Call every new quiz lead right away, and double dial.</b> Text them the moment they opt in. ACQ's set: Day 1 = 3 dials + 1 email + 1 text, Day 2 = 2 dials, Day 3 = 1 dial + 1 email + 1 text, Day 4 = 1 dial. If a lead replies by email or text, call back right away. <span class="tag hi">BIG</span><span class="tag ez">EASY</span><br><span class="src">Training video, "Dial Cadence" slide</span>
+<span class="sug"><b>Our suggestion for Biscayne:</b> an auto text from Close the second a quiz is submitted, and a rule that a rep calls within minutes. Load this exact 4-day dial plan into Close as a task sequence.</span></li>
+<li><b>Book same day or next day, and try to pull it even sooner.</b> Book no more than 4 days out. When someone books, call right away: "Would it be crazy if we did it right now?" ACQ says same-day and next-day bookings show up the most. <span class="tag hi">BIG</span><span class="tag ez">EASY</span><br><span class="src">Managing video, "General Booking Rules" and "Pull It Forward" slides</span>
+<span class="sug"><b>Our suggestion for Biscayne:</b> offer today or tomorrow first on the quiz booking page and on the phone. If a tech or rep has an open slot today, call people booked later in the week and offer it.</span></li>
+<li><b>Confirm or cancel every appointment.</b> No reply after booking? Text in 3 steps: "What's going on with [problem]?", "Did you get a chance to look at [the video]?", "I have time today at X or Y." No reply at 12 hrs: "Prepping for our call, could you check my last message?" At 24 hrs: "Someone's asking for that time. Quick 👍 to hold it?" No reply 12 hrs before: cancel and offer to rebook. Unconfirmed slots get rebooked. <span class="tag hi">BIG</span><span class="tag ez">EASY</span><br><span class="src">Managing video, "Priority 1 – Inbound Sets" slides</span>
+<span class="sug"><b>Our suggestion for Biscayne:</b> build these texts as a Close sequence for every booked water test or install visit.</span></li>
+<li><b>Send a video before every step (the "VSL sandwich").</b> One video gets them to book, the next gets them to show, the next helps them buy. In home services, Hormozi says: <i>do not email a quote</i>. While you walk to your truck, have them watch a video on an iPad, then come back and close. <span class="tag hi">BIG</span><span class="tag md">MEDIUM</span><br><span class="src">Start Here video, "Home Services Example" slide (about 25–28 min in)</span>
+<span class="sug"><b>Our suggestion for Biscayne:</b> film 1 Biscayne video (phone is fine, per the video) for after the quiz and before the visit, and 1 for the iPad at the home. Bring an iPad to every in-home visit.</span></li>
+<li><b>Never hang up or leave without a next step (BAMFAM).</b> BAMFAM means "book a meeting from a meeting." If they don't buy, book the next call right then. Save 2–3 minutes at the end to do it. Book now when you're out of time, when another decision maker is needed, or when financing is waiting. <span class="tag hi">BIG</span><span class="tag ez">EASY</span><br><span class="src">Start Here video, "Close" and "When to BAMFAM" slides</span>
+<span class="sug"><b>Our suggestion for Biscayne:</b> no rep leaves a home or ends a call without a date on the calendar in Close, including when financing approval is still pending.</span></li>
+<li><b>Get the spouse or other decision maker on the call.</b> Check BANT on every booking: Budget, Authority (who decides), Need, Timing. If a decision maker can't be there, have them watch the video first. <span class="tag hi">BIG</span><span class="tag ez">EASY</span><br><span class="src">Managing video, "Qualification: BANT and Deal Breakers" slides</span>
+<span class="sug"><b>Our suggestion for Biscayne:</b> when booking an in-home visit, ask that both homeowners be there. Add BANT questions to the setter script.</span></li>
+<li><b>Ask for the sale, then stay silent 8+ seconds.</b> Say the price ("It's X. Does that work for you?") and stop talking. ACQ's slide claims an 8+ second pause gives "23–40% more closes." <span class="tag hi">BIG</span><span class="tag ez">EASY</span><br><span class="src">Start Here "Pitch" slide; Managing "Closer Fixes" slide</span>
+<span class="sug"><b>Our suggestion for Biscayne:</b> one way to say it: the system price, and that it can be $99/mo at 0% interest, then go quiet. Roleplay this until it feels normal.</span></li>
+<li><b>One script, learned by heart.</b> Intro, Disco (find the pain), Pitch (2 min max), Close. New reps read it out loud 25 times a day and roleplay with the manager every day. No script = "no definition of good." <span class="tag hi">BIG</span><span class="tag md">MEDIUM</span><br><span class="src">Start Here "Script Crash Course"; Training "Bootcamp" slides</span>
+<span class="sug"><b>Our suggestion for Biscayne:</b> lock one setter script and one in-home closer script this week, then train 1 section per day: Mon Intro, Tue Disco, Wed Pitch, Thu Close, as ACQ does.</span></li>
+<li><b>Ask for a referral on every sale.</b> "Who else do you know who's as awesome as you?" Then start a group text with them. ACQ says referrals are 20–30% of their sales (Start Here) and "over 30%" (Managing). Also text past customers for referrals. <span class="tag md">MEDIUM</span><span class="tag ez">EASY</span><br><span class="src">Start Here ~71 min; Managing "Hunt Mode: Outbound" slide</span>
+<span class="sug"><b>Our suggestion for Biscayne:</b> ask at every install, and send a simple referral text to past installs from Housecall Pro.</span></li>
+<li><b>Work the "no" list, and a no-show is not a no.</b> Follow up with people who showed but didn't buy: 1) send value ("A customer just sent me this"), 2) check in, 3) bump ("Should I assume this isn't a priority?"), 4) re-offer. Work newest to oldest, 60 days back. Double dial before you text. <span class="tag md">MEDIUM</span><span class="tag ez">EASY</span><br><span class="src">Managing "Priority 3 – Nurture" slide</span>
+<span class="sug"><b>Our suggestion for Biscayne:</b> make this a Close smart view: quoted, not sold, last 60 days, newest first.</span></li>
+</ol>
+
+<h2 class="pb">What I watched</h2>
+<table><tr><th>#</th><th>Video</th><th>Length</th><th>Link</th><th>Transcribed?</th></tr>
+<tr><td>1</td><td>Start Here: Sales Strategy (also covers frame, VSL, and the full script)</td><td>75:05</td><td>acquisition.com/salesstart</td><td>Yes</td></tr>
+<tr><td>2</td><td>Recruiting</td><td>40:31</td><td>acquisition.com/sales-recruiting-who</td><td>Yes</td></tr>
+<tr><td>3</td><td>Training</td><td>25:51</td><td>acquisition.com/sales-training-bootcamp</td><td>Yes</td></tr>
+<tr><td>4</td><td>Managing</td><td>60:17</td><td>acquisition.com/sales-managing-culture</td><td>Yes</td></tr>
+<tr><td>–</td><td>Free Bonus page</td><td>no video</td><td>acquisition.com/sales-free-bonus</td><td>Not a video. It offers 2 free AI tools ("Call Notes" and "BANT Coach"). I didn't download them.</td></tr>
+</table>
+<p class="note">All 4 videos are on the one page linked (msg #98345). There were no video files in the group chat. Msg #98397 ("Doug plz add anything you see fit") has an attachment I can't open from here, so it's not in this report. How I did it: auto transcripts, plus slide screenshots every 8 seconds. Some spots (mostly when he was drawing on the whiteboard) came out garbled the first time. I re-ran those in 30-second pieces, and most came back clean. A few short bits are still unclear, so I used the slides there.</p>
+
+<h2>Notes per video</h2>
+<h3>1. Start Here: Sales Strategy (75 min)</h3>
+<ul>
+<li><b>Have a frame and a script before you hire.</b> No script means you're "asking people to hit a target they cannot see." He knocks down the excuses: "I don't want to sound scripted" (you won't if you know it), "every situation is different" (every closed sale is the same), "no one can sell like me."</li>
+<li><b>Script = 6-inch putts.</b> It's easier to teach someone one short shot than every shot. Reps should sell, not be a therapist, teacher, and consultant all at once.</li>
+<li><b>VSL (video sales letter) at every step.</b> Most prospects don't know enough, which is why it takes many calls. More info up front makes sales calls shorter. He says VSLs "can sometimes double or triple" how much each rep sells. A VSL can be shot on a phone.</li>
+<li><b>Parts of a VSL:</b> promise, pain, proof (people who look like the buyer), plan, then "old way vs. new way," then answer every objection, then a call to action. Make the CTA a simple question that makes the next meeting feel personal (his home-services example: "how many cars fit in your driveway?"). End with a long "proof gauntlet": before-and-after customer stories.</li>
+<li><b>Where to put the video:</b> before people opt in, keep it short, because every extra minute loses leads. After they opt in or book, it can be long. Each video sells the next step: the first one gets them to book, the next one gets them to show.</li>
+<li><b>Home services example:</b> after the walk-through, don't email a quote. Hand them an iPad with the video while you go to the truck, then come back and close. Tell them the first part is the key part and the rest is happy customers.</li>
+<li><b>Get them to watch the video:</b> tell them it "saves us time on the call."</li>
+<li><b>Two jobs of a sales system:</b> education (the right info) and qualification (the right person). If you close 0 out of 100, you're talking to the wrong people, so add the right friction (BANT).</li>
+<li><b>Intro:</b> name, company, recorded line, reason for the call. Then set the agenda and get a small "sound good?" yes.</li>
+<li><b>Disco:</b> where are they now, where do they want to be, and what's in the way. Get numbers. Dig with "Tell me more," "Give me an example," "Why?" Then recap, label the real problem, and confirm ("Does that sound right?").</li>
+<li><b>Pitch:</b> 2 minutes max, personalized. Problem → solution → benefit, 3 times, then ask. Use one analogy. Cut words, because he says 9 out of 10 scripts can lose 50–75% of their words.</li>
+<li><b>Close:</b> if they don't say yes, the job is to keep going. Start with "What's your main concern? What are you afraid of happening?" Then use 5 closes that work on any objection: Reason (the reason they gave is why they need it), Hypothetical (if that wasn't an issue, would you do it?), Zoom out, 1-to-10, Best case/worst case. Between each one, use AAA: Acknowledge, Associate ("our best clients ask that too"), Ask again.</li>
+<li><b>5 objections to script:</b> time, money, decision maker ("ask for support, not permission"), preferences ("which do you prefer: the part you don't like, or the result?"), and stall ("I need to think about it" means the cost of waiting).</li>
+<li><b>He says reps who ask for the sale the most close the most.</b> The loops let you ask again without making people mad.</li>
+<li><b>End of call:</b> if closed, ask for referrals and get names plus an intro text. If not, BAMFAM. Reasons to book now: it takes less time, there's no new to-do for either of you, and you can always move it.</li>
+</ul>
+<h3>2. Recruiting (40 min)</h3>
+<ul>
+<li>Prove the sales process works before you hire help. Don't change the process and the person at the same time ("never two news").</li>
+<li>Hire for fit on 2 of 3: same kind of prospect, same kind of sales process, same kind of product. He wants about 1 year of experience. Look for coachability, work ethic, and humility.</li>
+<li>Small with few leads? Hire setters first. Lots of leads? Hire closers first. Hire more than one rep at a time, because it takes the same time to train 1 as 5.</li>
+<li>Recruiting steps: ad → application + VSL → group call → skills 1-on-1 → culture 1-on-1 → offer. Always be hiring, so no rep thinks they can't be replaced.</li>
+<li>"It's cheaper to pay better to get better people." He says paying more per rep brings costs down overall. Setters and closers both get paid off closes.</li>
+</ul>
+<p class="note">Recruiting matters less for conversion today, so it's not in the top 10.</p>
+<h3>3. Training (26 min)</h3>
+<ul>
+<li><b>14-day bootcamp</b> for new reps, kept apart from the rest of the team. Day 1 sell the process, Day 2 intro, Day 3 discovery ("the call wins or loses here, not the pitch"), Day 4 bridge, pitch, and booking, Day 5 full script under pressure, Day 6 first real dials.</li>
+<li>Read the script out loud 25 times a day. "If you're not bored, you haven't done enough." Blackout method: black out one word per read until it's all memorized.</li>
+<li>Roleplay: frame it, model it, copy it, practice it. Script graduation on Day 7, pass or fail.</li>
+<li>Teach reps about the <b>prospect</b> (their pains and words) more than the product.</li>
+<li><b>Ramp gates:</b> new setters are capped (30 live connects, about 10 real 3+ min conversations, 2–3 sets a day) until the show rate is over 60%. ACQ's goal is 70–75%. He explains why: one rep burned through leads and nobody showed.</li>
+<li><b>Dial cadence:</b> 4 days, double dials from a local number. ACQ used to do 14 dials, but the last 7 only made 10% of sales, so they cut them.</li>
+<li>If someone replies by email, call them right away.</li>
+<li>Cut fast for bad culture fit or not taking feedback. Say on Day 1 that it's a performance seat with a 60-day window.</li>
+<li>Closer gate KPIs on their slide: 60% show, 90% offer, 30% close.</li>
+</ul>
+<h3>4. Managing (60 min)</h3>
+<ul>
+<li>Culture: "The worst person on the team is your acceptable level." Write the expectations down in a handbook. Leaderboards are a must: visible, accurate, real time, and with a real prize.</li>
+<li>Daily 5 for reps: read, 1 roleplay, game tape (review recorded calls), workout, and 50 dials. Daily huddle: shoutouts, customer wins, script training, roleplay.</li>
+<li><b>Find-and-fix table</b> by funnel step: dials → connect rate (often a system problem, like spam flags, slow speed to lead, or calling at bad times) → conversations (fix the first 30 seconds) → sets (dig deeper in discovery) → show rate (check BANT, book same/next day, VSL).</li>
+<li><b>Call notes</b> "really increase conversion." The setter's notes go to the closer, so the customer never has to re-explain.</li>
+<li><b>Setter → closer handoff:</b> right after booking, start a group text with the prospect, setter, and closer, and send the video ("watch this, it'll save time on your call"). The closer replies within minutes. Morning of the call, send a testimonial from someone with the same problem, with the key part highlighted.</li>
+<li><b>Pull it forward:</b> call new bookings right away and try to do the call now. He lists the wins: better show rate, better close rate, and more open slots.</li>
+<li>Text tip: "Looking forward to our call tomorrow." He says new numbers get spam-filtered, and appointment-style words get through.</li>
+<li><b>If the right people show up and don't buy,</b> it's one of 3 things: 1) the offer is bad (fix the offer, not the rep), 2) they're not ready (add video at every step, set a multi-call plan, send proof between calls), 3) the rep needs help (fix it in intro, disco, pitch, or close).</li>
+<li>Closer fixes: set the agenda like a pro. Get "a number on both" (where they are and where they want to be). Keep the pitch under 2 minutes. Never use "but" ("AND, never BUT"). Pause 8+ seconds after the ask.</li>
+<li>Closer day: about 20 booked, 12–15 live calls. Off calls, work the list: 1) new bookings, 2) BAMFAMs, 3) pipeline, then referrals, then old opt-ins.</li>
+<li>End of day: log outcomes, update notes, opt-outs, submit your worst call for review, and clear the inbox.</li>
+</ul>
+
+<h2 class="pb">Full checklist by funnel step</h2>
+<p class="note">✅ = from the videos. Yellow = our suggestion.</p>
+<h3>A. Speed to lead (new quiz lead → first talk)</h3>
+<ul>
+<li>✅ Text as soon as they opt in. Double dial from a local number. Use the 4-day plan (3/2/1/1 dials + emails + texts).</li>
+<li>✅ Treat an email or text reply like a callback, and call right away.</li>
+<li>✅ Call during the hours people pick up the most. Plan dial blocks around those hours. Check for spam-flagged numbers.</li>
+<li><span class="sug"><b>Our suggestion for Biscayne:</b> time how fast we call quiz leads now (Close has the timestamps) so we know our real speed to lead. I don't know it today.</span></li>
+</ul>
+<h3>B. Lead → booked appointment</h3>
+<ul>
+<li>✅ Use one setter script: Intro (name, company, reason, agenda, "sound good?") → Disco (now vs. want, what's in the way, numbers) → book.</li>
+<li>✅ Check BANT on every set. Ask about deal breakers right on the set call. Hesitation means either logistics or value, so figure out which one.</li>
+<li>✅ Book within 4 days at most. Same day or next day is best.</li>
+<li><span class="sug"><b>Our suggestion for Biscayne:</b> deal breakers for us could be: renting vs. owning the home, living outside Miami-Dade/Broward, or whether $99/mo works. Ask them on the set call.</span></li>
+</ul>
+<h3>C. Booked → showed up</h3>
+<ul>
+<li>✅ Pull it forward: call new bookings right away and offer now or today.</li>
+<li>✅ Send a "watch before we meet" video. Pitch it as a time saver.</li>
+<li>✅ Group text handoff, a testimonial the morning of, and "Talk soon" 1 hour before.</li>
+<li>✅ The no-reply plan: texts at 12 hrs and 24 hrs, then cancel at 12 hrs before. Rebook unconfirmed slots. Night before: send the next piece. Morning of: "Talk today."</li>
+<li>✅ A no-show is not a no. Move straight to rebooking.</li>
+</ul>
+<h3>D. Showed → sold</h3>
+<ul>
+<li>✅ Read the call notes before every appointment.</li>
+<li>✅ Keep the pitch to 2 minutes, and only pitch what maps to what they told you. Use one analogy.</li>
+<li>✅ State the price, then stay quiet 8+ seconds.</li>
+<li>✅ Objection loops: triage ("what's your main concern?") → 5 universal closes with AAA in between → 5 scripted objections.</li>
+<li>✅ In home services: no emailed quotes. Use the iPad video while you step out, then close.</li>
+<li>✅ Best case/worst case works better with a guarantee, because it takes away the risk.</li>
+<li><span class="sug"><b>Our suggestion for Biscayne:</b> script our answers to the 5 objections now: time, money (the $99/mo at 0% option), spouse, preferences (which system), and stall. If we have a guarantee, use it in best case/worst case. I don't know our guarantee terms, so that needs to come from AG.</span></li>
+</ul>
+<h3>E. Follow-up and nurture</h3>
+<ul>
+<li>✅ BAMFAM: book the next meeting on the call. After the call: 5 min later, send "We can fix this" plus proof that matches their objection. 3+ days out, send one value message. Then the night-before and morning-of texts.</li>
+<li>✅ Pipeline ladder: value → check-in → bump → re-offer. Work it newest to oldest, 60 days back. Color code it: yellow = no response, green = responded, red = opt out.</li>
+<li>✅ Referrals on every close, and text past customers who send a nice message.</li>
+</ul>
+<h3>F. The offer</h3>
+<ul>
+<li>✅ If the right people show up and still don't buy, fix the offer first, not the rep. Hormozi points to his book "$100M Offers": make it less scalable, more personal, and hard to compare.</li>
+<li><span class="sug"><b>Our suggestion for Biscayne:</b> check our close rate by system (Minimum $3,992 up to Floridian Pro $8,992) before changing prices. The videos give no water-industry numbers.</span></li>
+</ul>
+<h3>G. The quiz funnel</h3>
+<ul>
+<li>✅ Before opt-in, keep any video short, because every extra minute loses leads.</li>
+<li>✅ After opt-in, a longer video is fine. Its job is to get them to book or show.</li>
+<li>✅ Add the right friction (BANT) so the wrong people don't reach sales.</li>
+<li><span class="sug"><b>Our suggestion for Biscayne:</b> keep the quiz at biscaynewater.com/quiz short. Put a Biscayne video on the page after they finish, with a booking calendar and before/after proof under it. Add 1–2 quiz questions that work as BANT (own the home? who decides? how soon?).</span></li>
+</ul>
+<h3>H. Team habits that protect conversion</h3>
+<ul>
+<li>✅ A real-time leaderboard (a Slack bot is fine). Daily huddle with roleplay. Weekly 1-on-1 with one focus per rep.</li>
+<li>✅ Game tape: the manager picks a call, sets the focus, the team listens, the manager models the fix, then everyone practices and recaps.</li>
+<li>✅ Track each funnel step weekly: dials, connect rate, conversations, sets, show rate, close rate. Fix the weakest step first.</li>
+<li><span class="sug"><b>Our suggestion for Biscayne:</b> post a daily close/show leaderboard in Slack from Close data.</span></li>
+</ul>
+
+<h2>What these videos don't tell us</h2>
+<ul>
+<li>They're about ACQ selling to business owners, with examples from gyms, weight loss, and solar. They have no water-filtration numbers.</li>
+<li>ACQ's numbers (60–75% show rate, 30% close rate, 23–40% more closes from pausing, 20–30%+ of sales from referrals) are their claims about their own team. They're not Biscayne targets, and I didn't check them.</li>
+<li>I don't know our current speed to lead, show rate, or close rate. Pull them from Close before and after these changes to see what works.</li>
+</ul>
+<p class="foot">Made by Grok Bot for Biscayne Water · Nov 16, 2026 · Source: acquisition.com/salesstart ($100M Sales Teams, Alex Hormozi), shared in Home Service Millionaires V3 msg #98345.</p>
+</div></body></html>
