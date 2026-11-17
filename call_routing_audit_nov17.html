@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biscayne Water: Inbound call routing audit (Nov 17)</title><style>
+@page { size: letter; margin: 0.42in; background:#0b0f14; }
+* { box-sizing:border-box; -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+html,body { margin:0; padding:0; background:#0b0f14; color:#e6edf3; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; font-size:13px; line-height:1.45; }
+.container { max-width:900px; margin:0 auto; padding:18px 16px 28px; }
+.badge { display:inline-block; background:#1e293b; color:#93c5fd; border:1px solid #334155; border-radius:999px; padding:3px 10px; font-size:10px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; margin:0 6px 8px 0; }
+.badge.r { background:#3f1d1d; color:#fca5a5; border-color:#7f1d1d; }
+h1 { margin:0 0 6px; font-size:24px; line-height:1.15; color:#fff; }
+.subtitle { margin:0 0 16px; color:#94a3b8; font-size:12.5px; }
+h2 { margin:20px 0 8px; font-size:16px; color:#60a5fa; border-left:3px solid #3b82f6; padding-left:10px; page-break-after:avoid; }
+h3 { margin:12px 0 6px; font-size:13.5px; color:#f8fafc; page-break-after:avoid; }
+p { margin:0 0 8px; color:#cbd5e1; }
+ul,ol { margin:0 0 10px; padding-left:20px; color:#cbd5e1; }
+li { margin:0 0 6px; }
+.cards { display:flex; gap:10px; margin:12px 0 16px; }
+.card { flex:1; background:#131a26; border:1px solid #1f2a3b; border-radius:12px; padding:12px; page-break-inside:avoid; }
+.num { font-size:22px; font-weight:800; line-height:1.1; color:#fff; }
+.num.r { color:#f87171; } .num.y { color:#fbbf24; } .num.g { color:#4ade80; }
+.lbl { color:#94a3b8; font-size:11px; margin-top:4px; }
+.box { background:#131a26; border:1px solid #1f2a3b; border-radius:10px; padding:10px 12px; margin:10px 0; page-break-inside:avoid; }
+.box.red { border-color:#7f1d1d; background:#1a1114; } .box.amber { border-color:#78350f; background:#1a150d; } .box.green { border-color:#14532d; background:#0f1a14; }
+table { width:100%; border-collapse:collapse; margin:8px 0 14px; font-size:11px; }
+th { text-align:left; background:#182233; color:#93c5fd; padding:6px 7px; border:1px solid #243247; }
+td { padding:6px 7px; border:1px solid #1f2a3b; color:#cbd5e1; vertical-align:top; }
+tr { page-break-inside:avoid; }
+.tag { display:inline-block; padding:1px 7px; border-radius:999px; font-size:10px; font-weight:700; white-space:nowrap; }
+.t-ok { background:#0f2a1a; color:#4ade80; } .t-bad { background:#3f1d1d; color:#fca5a5; } .t-unk { background:#2a2410; color:#fbbf24; } .t-info { background:#16233a; color:#93c5fd; }
+code { background:#182233; padding:1px 5px; border-radius:4px; color:#e2e8f0; font-size:11.5px; }
+.small { color:#94a3b8; font-size:11px; }
+</style></head><body><div class="container">
+
+<span class="badge">Read only</span><span class="badge">No test calls</span><span class="badge r">1 big gap, 4 setup holes</span>
+<h1>Where do our calls go?</h1>
+<p class="subtitle">Inbound call routing audit for Chad Ball. Tuesday, Nov 17, 2026 (ET). Nothing was changed, called, or sent. Anything we could not prove is marked <b>unknown</b>.</p>
+
+<div class="cards">
+ <div class="card"><div class="num">5.4</div><div class="lbl">calls a day in CallRail (163 calls, Oct 18 to Nov 16)</div></div>
+ <div class="card"><div class="num r">75.9%</div><div class="lbl">October answer rate. Median for the group is 91.4%. 41 missed.</div></div>
+ <div class="card"><div class="num y">1 line</div><div class="lbl">every tracked number rings the same phone. No backup.</div></div>
+</div>
+
+<h2>TL;DR</h2>
+<div class="box red">
+<ol>
+<li><b>One phone catches everything.</b> Every CallRail number forwards to one line, 786-823-xxxx. The call flow is: record, greeting, dial that line, then voicemail. No ring group, no business hours, no backup person. Who owns 786-823-xxxx is <b>unknown</b>.</li>
+<li><b>Our main number is a tracking number labeled "Google My Business."</b> 305-846-7352 is on every website page, the quiz, the shop, the PPC page, and the listings we found. CallRail tags it as GMB. So website visitors, directory callers and Google profile callers all land in one bucket. That is why almost every call says GMB (28 of 36 last full week).</li>
+<li><b>Some calls never touch CallRail.</b> Every QuickBooks estimate and invoice shows <b>+1 (917) 625-4805</b> as our phone. That number is not in CallRail. A customer who calls it from a quote is not counted. Owner: <b>unknown</b> (public lookup says it is an AT&amp;T mobile number in New York).</li>
+<li><b>The tracking setup has holes.</b> The swap number for 846-7352 is 305-555-0144, which looks like a placeholder. The pool swap number 305-363-1473 is not on any page we found. The main website has no CallRail swap script at all. The Homestead and postcard numbers got 0 calls this week.</li>
+<li><b>Calls are light, and many are short.</b> CallRail sees about 5.4 a day, not 10. Many answered calls are only 15 to 25 seconds, and 10 callers hung up before pickup (Nov 10 to 17). We cannot tell yet if the other calls Chad expects are happening somewhere CallRail can't see.</li>
+</ol>
+</div>
+
+<h2>What we did NOT find</h2>
+<ul>
+<li>No sign that calls are forwarded to a stranger or a RevPilot number. Every CallRail number goes to 786-823-xxxx, and we do not know who owns it. So we cannot rule it out. This is the first thing to confirm.</li>
+<li>Close phone settings: <b>unknown</b>. RevPilot still controls the Close login, and the Zapier Close connection has needed a reconnect since Nov 16.</li>
+</ul>
+
+<h2>Every number we found</h2>
+<table>
+<tr><th style="width:15%">Number</th><th style="width:27%">Where it shows up</th><th style="width:31%">Owner or where it goes</th><th>Matches main line?</th></tr>
+<tr><td><b>(305) 846-7352</b></td><td>Header, footer and tap-to-call link on all 100 pages in the sitemap, quiz, contact, privacy, shop, PPC page. Google place data, Nextdoor, CitySquares, MiamiBizGuide.</td><td>CallRail tracking number, "first number," source GMB. Forwards to 786-823-xxxx (CallRail).</td><td><span class="tag t-ok">This is the main line</span></td></tr>
+<tr><td>(305) 555-0144</td><td>CallRail swap target for 846-7352. On no page.</td><td>Looks like a placeholder (555-01xx is a fake range). Real owner <b>unknown</b>.</td><td><span class="tag t-bad">Mismatch</span></td></tr>
+<tr><td>Website pool, 6 numbers<br><span class="small">834-7123, 783-3757, 315-3250, 697-1465, 783-3198, 918-9186 (all 305)</span></td><td>Only shown to visitors where CallRail swapping works. Only the PPC page loads the swap script.</td><td>CallRail. Forwards to 786-823-xxxx (CallRail).</td><td><span class="tag t-info">Tracking only</span></td></tr>
+<tr><td>(305) 363-1473</td><td>Pool swap target. Not on any page, listing or search result we checked.</td><td><b>Unknown.</b> Public prefix list says 305-363 is a Florida Keys rate center.</td><td><span class="tag t-unk">Unknown, check</span></td></tr>
+<tr><td>(305) 518-1691</td><td>Google Ads call asset (PPC).</td><td>CallRail. Forwards to 786-823-xxxx (CallRail).</td><td><span class="tag t-ok">Works as tracking</span></td></tr>
+<tr><td>561-545-xxxx (Chad's cell)</td><td>Swap target for the PPC number.</td><td>Chad's cell. Not on any page we crawled.</td><td><span class="tag t-info">Not customer facing</span></td></tr>
+<tr><td>(305) 520-7688</td><td>CallRail "GMB Homestead." Not on any page or listing we found.</td><td>CallRail. Forwards to 786-823-xxxx. 0 calls Nov 10 to 17.</td><td><span class="tag t-unk">Unknown if it is on a profile</span></td></tr>
+<tr><td>(305) 614-5813</td><td>Raving Fans postcards. Not on the website (by design). Doug confirmed it to Raving Fans on Nov 12.</td><td>CallRail. Forwards to 786-823-xxxx. 0 calls Nov 10 to 17.</td><td><span class="tag t-unk">Unknown if mailers dropped</span></td></tr>
+<tr><td><b>786-823-xxxx</b></td><td>The one number CallRail dials for every line above.</td><td><b>Owner unknown.</b> Full number is in the chat.</td><td><span class="tag t-unk">Unknown, check</span></td></tr>
+<tr><td><b>+1 (917) 625-4805</b></td><td>QuickBooks estimate and invoice letterhead. Seen on Estimate #1475 (Nov 12) and the estimate emailed Nov 17.</td><td><b>Unknown owner.</b> Public lookup: AT&amp;T Mobility wireless, New York. Not in CallRail.</td><td><span class="tag t-bad">Mismatch, bypasses CallRail</span></td></tr>
+<tr><td>(305) 555-0123</td><td>Grey example text in the phone box on the quiz and PPC form.</td><td>Not a real line.</td><td><span class="tag t-info">Ignore</span></td></tr>
+</table>
+
+<h2>Where a customer can call, and what we saw</h2>
+<table>
+<tr><th style="width:22%">Place</th><th>What we found</th><th style="width:18%">Status</th></tr>
+<tr><td>biscaynewater.com (100 pages)</td><td>Only 846-7352, with a tap-to-call link on every page. No CallRail swap script. The page schema also lists 846-7352.</td><td><span class="tag t-ok">Click to call OK</span></td></tr>
+<tr><td>/quiz</td><td>Top call button goes to 846-7352. No swap script.</td><td><span class="tag t-ok">OK</span></td></tr>
+<tr><td>go.biscaynewater.com (same as the netlify PPC page)</td><td>Prints 846-7352 and loads the CallRail swap script. A PPC visitor whose swap fails or is blocked dials the "GMB" number. We could not see what a real visitor sees.</td><td><span class="tag t-unk">Partly unknown</span></td></tr>
+<tr><td>shop.biscaynewater.com</td><td>846-7352 with a tap-to-call link.</td><td><span class="tag t-ok">OK</span></td></tr>
+<tr><td>Google Business Profile</td><td>Google place data lists 846-7352, the site with <code>utm_campaign=gmb</code>, and a Housecall Pro booking link. It shows 4.9 from 48 reviews (copy date unknown). The live profile was not opened.</td><td><span class="tag t-unk">Need GBP login</span></td></tr>
+<tr><td>Nextdoor, CitySquares, MiamiBizGuide</td><td>All show 846-7352.</td><td><span class="tag t-ok">Match</span></td></tr>
+<tr><td>Facebook</td><td>The site links to one page (profile id 61589921619912). Google place data links a different page (1098257600041526). Phone on either is <b>unknown</b>.</td><td><span class="tag t-unk">Two pages</span></td></tr>
+<tr><td>Instagram @biscaynewater</td><td>Phone on profile <b>unknown</b>.</td><td><span class="tag t-unk">Unknown</span></td></tr>
+<tr><td>Yelp, BBB, Angi</td><td>No listing turned up in search. That does not prove none exists.</td><td><span class="tag t-unk">Unknown</span></td></tr>
+<tr><td>QuickBooks estimates and invoices</td><td>Show 917-625-4805, not our main line.</td><td><span class="tag t-bad">Mismatch</span></td></tr>
+<tr><td>Text opt-out line</td><td>Privacy page tells people to text STOP to 846-7352. Whether texts to that number reach anyone is <b>unknown</b>.</td><td><span class="tag t-unk">Unknown</span></td></tr>
+<tr><td>Close, Housecall Pro</td><td>Close numbers and routing: <b>unknown</b> (RevPilot holds the login). Housecall Pro sent a "phone number updated" notice for a user profile today at 4:06 PM ET. Whose, and why: <b>unknown</b>.</td><td><span class="tag t-unk">Need access</span></td></tr>
+</table>
+
+<h2>Why the call count may look low</h2>
+<ul>
+<li>CallRail counts 163 calls in 30 days. That is 5.4 a day. If the 10 a day figure comes from the Google profile, Google counts taps on the call button too, not finished calls. We have not seen that Google number, so this is a guess to check, not a fact.</li>
+<li>Calls to 917-625-4805 or straight to 786-823-xxxx do not show in CallRail. We have no count for them.</li>
+<li>Last week's mix (Nov 10 to 17, 43 calls): 846-7352 about 28, PPC about 6, pool about 9. Homestead 0, postcards 0. 10 hung up before pickup and 2 went to missed.</li>
+<li>CallRail weekly emails since late August: 27, 19, 38, 41, 48, 35, 41, 34, 38, 42, 41, 36 calls a week (last one is Nov 9 to 15). That is about 5 to 7 a day, and it has been flat for about 10 weeks.</li>
+</ul>
+
+<h2>What the CSR screenshot says</h2>
+<p>We could not download Chad's screenshot (message 104578). The photo link needs a sign-in the bot does not have. Please paste the text of that chat or resend it, and we will add it here. Until then, nothing in this report depends on what the CSR said.</p>
+
+<h2>What we need to confirm the rest</h2>
+<ol>
+<li><b>Who owns 786-823-xxxx</b> and who answers it. Is it one person's cell? Ask the CSR.</li>
+<li><b>Google Business Profile login.</b> Which phone is primary, which are extra, is there a Homestead profile, and the profile's own call numbers for the last 30 days.</li>
+<li><b>QuickBooks company settings.</b> Who set 917-625-4805 and is it ours.</li>
+<li><b>Close phone settings</b> (needs the RevPilot login or RevPilot's help). Any numbers, forwarding or dialer routing.</li>
+<li><b>Carrier or phone portal for 846-7352 and 786-823-xxxx.</b> Port history, forwarding, voicemail.</li>
+<li><b>Live PPC page check on a phone</b> from a Google ad click, to see which number shows after the swap. 305-363-1473 is the one to look for.</li>
+<li><b>Facebook and Instagram admin.</b> Phone buttons and which Facebook page is real.</li>
+<li><b>Yelp, BBB, Angi.</b> Search by phone and by name once logged in.</li>
+</ol>
+
+<h2>What I would fix first (for you to decide)</h2>
+<ol>
+<li>Put one answer plan behind 786-823-xxxx: a ring group with 2 or 3 people, hours, and a backup number.</li>
+<li>Fix the estimate and invoice phone so it shows the main line (or a tracked number).</li>
+<li>Add the CallRail swap script to the main website, and give GBP its own tracking number, so site, GBP and PPC calls stop landing in one bucket.</li>
+<li>Replace the 555-0144 and 363-1473 swap targets with the real numbers on the pages.</li>
+</ol>
+<p class="small">Sources: crawl of biscaynewater.com sitemap (100 pages), quiz, contact, shop and PPC page on Nov 17; CallRail dashboard read by Grok Bot in the browser on Nov 17 (nothing changed); CallRail weekly and alert emails to info@; QuickBooks estimate emails; Raving Fans emails; public search results and place data copies (dates vary). Customer numbers are left out. Personal numbers are masked.</p>
+</div></body></html>
