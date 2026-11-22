@@ -45,9 +45,11 @@ body{padding:14px 0.65in 0 0.65in}
 </head>
 <body>
 <div class="wrap">
-<p class="kicker">Biscayne Water · Review · Nov 22, 2026</p>
+<p class="kicker">Biscayne Water · Review · Nov 22, 2026 · v2</p>
 <h1>ACQ AI’s follow-up flow: what to keep, what to fix, and can Grok build it?</h1>
 <p class="sub">Steve asked: push back on what doesn’t make sense, and say if Grok can build it. Short answer: good bones, wrong tools. Build it inside Close. Grok can do most of it.</p>
+
+<div class="box good"><p class="fine" style="margin:0"><b>v2 update (12:45 PM ET).</b> Steve re-pasted ACQ’s flow (msg 127172) and pasted ACQ’s answers to my 8 questions (msg 127179). Both are stored cut off at exactly 4,000 characters again. <b>127172</b> adds only one thing: ACQ’s Day 7 “last ping” text, which stops mid-word at “Otherwise I’ll stop buggin”. <b>127179</b> answers questions 1–3 in full: the Day 7–30 lanes, deliverability rules, where reps still matter, P-queues vs tasks, and who signs the texts. It stops partway through question 4. What changed in v2: new section 3.11 reviews ACQ’s new parts, texts are now signed by a real person, the Day 7 text is added, the build estimate is updated, and the questions list now holds only the ones still open.</p></div>
 
 <div class="box warn"><p class="fine" style="margin:0"><b>Gap in the source.</b> The iMessage paste (msg 127122) is stored cut off at exactly 4,000 characters. It ends right at the heading <b>“Day 7”</b>. So I could not read ACQ’s Day 7, days 8–30, the “deliverability / spam rules” part, or the “where reps still matter” part from that message. For the later stages (reminders, no-show, no-sale, long-term) I used the longer “30-Day Sales Machine” ACQ answer Steve posted in Slack #admin at 11:41 AM ET. If the cut-off part says something different, I have not reviewed it. <b>AG’s copy reference (msg 127132):</b> the file did not come through. Our iMessage line only receives text, photos, videos and voice notes. A document shows up as an empty placeholder with no file (I checked the photo, audio and video endpoints, and the ZeroSettle docs say documents aren’t delivered). So the rewrites below follow our copy skill and ad rules, <b>not</b> AG’s reference. Send it as a photo/screenshot or a link and I’ll redo them in its voice. <b>Labels:</b> <b>Fact</b> = checked in a source. <b>Assumption</b> = my best read, not checked.</p></div>
 
@@ -55,9 +57,9 @@ body{padding:14px 0.65in 0 0.65in}
 <ol>
 <li>✅ <b>Keep:</b> stay on Close, keep the shared P-queues, no per-rep ownership, and let automation send the boring texts. That fixes our real gap: <b>45% of leads get zero texts in 7 days</b>, and days 3–7 get only <b>0.4 dials a day</b> (Viktor, Close data, Nov 22).</li>
 <li>❌ <b>Don’t add Salesmsg or Twilio, and don’t use Zapier for the texts.</b> Close already has this built in: Workflows send SMS and email on delays, stop when the lead replies, and block anyone who texts STOP.</li>
-<li>❌ <b>Fix the copy.</b> “Just pulled your water report” is not true at minute 2. “All-in price” by email breaks our rule. Texts sent “from [Rep]” don’t work when no rep owns the lead.</li>
+<li>❌ <b>Fix the copy.</b> “Just pulled your water report” is not true at minute 2. “All-in price” by email breaks our rule. Texts sent “from [Rep]” need one real named person who agrees to it (ACQ’s v2 answer), not whoever owns the lead.</li>
 <li>⚠️ <b>Too many texts, and no quiet hours or STOP line.</b> 9 texts plus 13 calls in 7 days. Spanish leads already complain we call too much.</li>
-<li>🛠️ <b>Can Grok build it?</b> Yes, most of it, inside Close, built paused and tested on a dummy lead first. I need answers to 6 items from the team (section 6) and 8 questions answered by ACQ (section 7).</li>
+<li>🛠️ <b>Can Grok build it?</b> Yes, most of it, inside Close, built paused and tested on a dummy lead first. I need answers to 6 items from the team (section 6), and 6 questions are still open for ACQ (section 7).</li>
 </ol>
 
 <h2>2. What ACQ got right</h2>
@@ -85,7 +87,7 @@ body{padding:14px 0.65in 0 0.65in}
 <ul>
 <li><b>Fact:</b> A Close Workflow text sends from one user: the workflow owner, one named user, or a user saved in a lead field. That user must turn on “Allow automated Workflows to send on your behalf.” <span class="cite">/workflows/workflow-steps</span></li>
 <li>No one owns new leads, so every text would come from one person’s number. Replies would go to that person, and so would the spam risk.</li>
-<li><b>Fix:</b> sign texts as <b>“the Biscayne Water team”</b> and send them from one team texting number that the reps watch in the Close inbox. Don’t use a rep’s personal line. <b>Assumption:</b> whether a Workflow can send from a shared team number in our setup needs a test on a dummy lead.</li>
+<li><b>Fix (v2, agreed with ACQ):</b> send from one shared local number that reps watch in the Close inbox, and sign as <b>one real person</b> (ACQ suggests “Amanda with Biscayne Water”). ACQ says a real name gets more replies and fewer opt-outs than “the team.” That’s ACQ’s claim, and I haven’t seen the data. It’s only honest if that person really works here, agrees, and a teammate can reply “Amanda’s with a customer, I can help.” Don’t use a rep’s personal line. <b>Assumption:</b> whether a Workflow can send from a shared team number in our setup needs a test on a dummy lead.</li>
 </ul>
 
 <h3>3.3 “Just pulled your [City] water report” is a lie, unless we really pull one</h3>
@@ -140,6 +142,25 @@ body{padding:14px 0.65in 0 0.65in}
 <li>Don’t limit it to Meta. Google, /quiz and website leads need follow-up too. <b>Question:</b> do Partnership leads get it?</li>
 </ul>
 
+<h3>3.11 New in v2: ACQ’s Day 7–30 lanes, spam rules and rep roles</h3>
+<div class="box good"><b>Agree:</b>
+<ul>
+<li><b>P-queues stay the dial engine,</b> and the blitz sends only texts and emails, with no call tasks (ACQ answer 2). That’s exactly what this review proposed.</li>
+<li><b>Day 7 “last ping, reply REPORT”</b> is an honest takeaway with one clear action. Score H7 / O7. It’s only true if we really have a city report to show (section 3.3).</li>
+<li><b>Where reps still matter:</b> the full script, handling objections live, and BAMFAM (every talk ends with a date). This matches our objection playbook.</li>
+<li><b>Long-term nurture:</b> 1 email and 1 text a month. Fine, as long as there’s a STOP line at least once a month (Close 10DLC rules).</li>
+<li><b>No link shorteners, short human texts, and STOP in the first text.</b> Agree. Carriers flag public shorteners too. <span class="cite">T-Mobile Code of Conduct 4.7</span></li>
+</ul></div>
+<div class="box warn"><b>Push back:</b>
+<ul>
+<li><b>“Rotate across 3–5 lines” is a red flag.</b> Spreading the same texts across many numbers is “snowshoeing.” CTIA says senders should not do it, and T-Mobile can shut the campaign down for it. At about 9 leads a day and 2 texts at most per lead, that’s under ~20 texts a day, so 1–2 numbers is plenty. The “100–150 a day per number” cap doesn’t matter at our volume. <span class="cite">CTIA Messaging Principles 5.5.2 · T-Mobile Code of Conduct 3.1, 4.3</span></li>
+<li><b>No-sale text: “we’ll still honor today’s install windows”</b> (softer than v1’s “today’s pricing”). Only send it if install slots really fill up. Otherwise cut it. Our rule: no fake urgency.</li>
+<li><b>No-sale recap email with price</b> is OK, because they attended and saw it. This is the one place price goes in writing.</li>
+<li><b>“$10K quote” angle:</b> only use it with real competitor quotes from our customers, and don’t name the company unless legal approves.</li>
+<li><b>No-show and presented/no-sale lanes need a trigger Close doesn’t have yet.</b> Today there’s no no-show track, and a no-sale gets just one task (Viktor). Reps need a way to log “No-show” and “Presented, no sale,” for example a new choice on the Not Sold card or a lead status. The team has to decide that first.</li>
+<li><b>No-sale cadence</b> (calls on days 1, 3, 7, 14, 30) adds call tasks. Any task pulls the lead out of the P-queues, which is fine here because these leads are past the blitz. Confirm that with Viktor.</li>
+</ul></div>
+
 <h3>3.10 Smaller things</h3>
 <ul>
 <li><b>10DLC won’t fix “Spam Likely” on calls.</b> 10DLC is for texts. Call labels are fixed by Close’s Trusted Calling step (STIR/SHAKEN and Voice Integrity), which is part of the same registration, and by not over-dialing one number. <span class="cite">/a2p-10dlc</span></li>
@@ -160,26 +181,28 @@ body{padding:14px 0.65in 0 0.65in}
 <tr><td>SMS D3-6 “close your file or keep a spot open”</td><td>5</td><td>6</td><td>Takeaway is OK. “Keep a spot open” hints at made-up scarcity.</td></tr>
 <tr><td>SMS D3-6 “install in [nearby city]”</td><td>7</td><td>7</td><td>Good proof (Ogilvy #9), only if it’s real.</td></tr>
 <tr><td>Email D4 before/after photo</td><td>8</td><td>8</td><td>Before/after sells (HCATS #33–37). Needs real photos with permission.</td></tr>
+<tr><td>SMS D7 “last ping… reply ‘report’” (v2)</td><td>7</td><td>7</td><td>Honest takeaway, one action. Needs a real report behind “your [City] water report.”</td></tr>
+<tr><td>No-sale SMS “honor today’s install windows” (v2)</td><td>5</td><td>5</td><td>Only true if slots really fill. Otherwise it’s fake urgency.</td></tr>
 </table>
 
 <h2>5. Fixed copy (ready to load as Close templates)</h2>
-<p class="fine">Every English text is under 140 characters. Each one is signed “the Biscayne Water team,” has no price and nothing made up, and asks for one action. Times are fixed words, not blanks.</p>
+<p class="fine">Every English text is under 140 characters. Each one is signed by one real named person ([Name], for example Amanda if she agrees), has no price and nothing made up, and asks for one action. Times are fixed words, not blanks.</p>
 
 <h3>English, days 0–7 (6 texts, 2 emails)</h3>
-<div class="tmpl"><b>T1 · Day 0, after the first missed call</b><br>Hi [First], it’s the Biscayne Water team. We got your water request. Is now or later today better for a quick call? Reply STOP to opt out</div>
+<div class="tmpl"><b>T1 · Day 0, after the first missed call</b><br>Hi [First], it's [Name] with Biscayne Water. We got your water request. Is now or later today better for a quick call? Reply STOP to opt out</div>
 <div class="tmpl"><b>T2 · Day 0, +3 hours</b><br>Sorry we missed you, [First]. What time today works for a 5 min call about the water in your home? Just text back a time.</div>
 <div class="tmpl"><b>Email 1 · Day 0</b> · Subject: <i>Your water request, [First]</i><br>Thanks for reaching out. Here’s what the call looks like: 1) we ask what bugs you about your water, 2) we look at your city’s public water report together, 3) you get your options. No pressure, about 10 minutes. 1000+ South Florida customers, 5 stars, extended 15 year warranty. Reply with a good time, or call us at [team number].</div>
 <div class="tmpl"><b>T3 · Day 1</b> (ACQ’s, kept)<br>Quick q, [First]: what bugs you most? Spots and buildup, the chlorine smell, or what the family drinks? We’ll focus on that when we talk.</div>
 <div class="tmpl"><b>T4 · Day 2</b><br>[City] posts a yearly water report. Want us to walk you through yours in 5 min? Is 11am or 5pm better?</div>
 <div class="tmpl"><b>T5 · Day 4</b> + Email 2 (one real before/after photo)<br>1000+ South Florida customers, 5 stars. Want to see what our system looks like in a home like yours? Reply YES and we’ll call.</div>
-<div class="tmpl"><b>T6 · Day 6</b><br>Should we keep your file open or close it? Both are fine. Reply 1 to keep it open or 2 to close it.</div>
+<div class="tmpl"><b>T6 · Day 7</b> (ACQ’s v2 “last ping,” tightened)<br>Last text from me, [First]. Want to walk through your [City] water report and options? Reply REPORT. If not, I'll stop here.</div>
 
 <h3>Spanish, days 0–7 (4 texts)</h3>
-<div class="tmpl"><b>T1 · Día 0</b><br>Hola [First], le escribe el equipo de Biscayne Water. Recibimos su solicitud. ¿Le llamamos ahora o más tarde hoy? Responda STOP para salir</div>
+<div class="tmpl"><b>T1 · Día 0</b><br>Hola [First], le escribe [Name] de Biscayne Water. Recibimos su solicitud. ¿Le llamo ahora o más tarde hoy? Responda STOP para salir</div>
 <div class="tmpl"><b>T2 · Día 1</b><br>Perdón, no pudimos hablar. ¿A qué hora le queda bien una llamada de 5 minutos hoy? Solo responda con la hora.</div>
 <div class="tmpl"><b>T3 · Día 3</b><br>[City] publica un informe anual del agua. ¿Le explicamos el suyo en 5 minutos? ¿Mejor a las 11am o a las 5pm?</div>
-<div class="tmpl"><b>T4 · Día 6</b><br>¿Dejamos su expediente abierto o lo cerramos? Las dos están bien. Responda 1 para dejarlo abierto o 2 para cerrarlo.</div>
-<p class="fine">A native Spanish speaker on the team should read these before they go live. After day 7, only 1 text and 1 email a month (long-term nurture), and a STOP line at least once a month (Close 10DLC rules).</p>
+<div class="tmpl"><b>T4 · Día 7</b><br>Último mensaje, [First]. ¿Quiere revisar el informe del agua de [City] y sus opciones? Responda INFORME. Si no, no le escribo más.</div>
+<p class="fine">Use straight apostrophes (') in texts, because curly ones can make a text bill as 2 parts. A native Spanish speaker on the team should read these before they go live. After day 7, only 1 text and 1 email a month (long-term nurture), and a STOP line at least once a month (Close 10DLC rules).</p>
 
 <h2 class="break">6. Can Grok build it? Yes, most of it.</h2>
 <table>
@@ -189,33 +212,34 @@ body{padding:14px 0.65in 0 0.65in}
 <tr><td>Build 2 Workflows (EN, ES), <b>paused</b>: call-event trigger, send window, goals, no task steps</td><td>Grok</td><td>2–3 hrs</td></tr>
 <tr><td>Test on a dummy lead with Viktor: texts land, replies stop the run, P-queues still fill</td><td>Grok + Viktor</td><td>1 hr</td></tr>
 <tr><td>Go live on new leads only, then a weekly check of reply rate, STOP rate and booked calls</td><td>Grok (after your yes)</td><td>15 min/week</td></tr>
-<tr><td>Later stages (reminders, no-show, no-sale, monthly nurture)</td><td>Grok</td><td>About 1 day</td></tr>
+<tr><td>Later lanes from ACQ v2: appointment reminders, no-show (days 0–3), no-sale (days 0, 1, 3, 7, 14, 30), monthly nurture, plus re-entry to the blitz when someone replies</td><td>Grok, after the team adds a “No-show” and “Presented, no sale” marker</td><td>1–1.5 days</td></tr>
+<tr><td><b>Total</b></td><td></td><td><b>About 2–2.5 days of my work</b> (estimate), plus waiting on decisions</td></tr>
 </table>
 <p class="fine"><b>Assumption:</b> Workflows can’t be built through the Zapier Close actions I have, so I’d build them in Close in my browser. I need a Close login with admin rights there. If it turns out 10DLC isn’t approved yet, Twilio says campaign review takes up to 5 business days for standard use, and a rejected application costs a fee to resubmit. <span class="cite">twilio.com/docs/messaging/compliance/a2p-10dlc/quickstart · help.close.com/…/a2p-10dlc</span></p>
 
 <h3>What needs a human</h3>
 <ol>
 <li><b>Check our Close plan</b> is Growth or Scale, and check that <b>10DLC + Trusted Calling</b> are approved (Close admin, 5 min).</li>
-<li><b>Pick the sender:</b> one team texting number reps watch, or a named setter. Turn on “Allow automated Workflows to send on your behalf” for that user. If we need a new Close number, Close charges usage for it (price not checked).</li>
+<li><b>Pick the sender:</b> one shared local number reps watch, signed by one real person who agrees (ACQ suggests Amanda). Use 1–2 numbers, not 3–5. Turn on “Allow automated Workflows to send on your behalf” for that user. If we need a new Close number, Close charges usage for it (price not checked).</li>
 <li><b>Consent line</b> on the Meta EN/ES forms and /quiz that names Biscayne Water and texts. I can draft it. Someone with Meta form access makes a new form version.</li>
 <li><b>Lawyer OK</b> on the cadence and consent text (Florida §501.059 and §501.616).</li>
 <li><b>Real before/after photos</b> and a list of recent installs by city, with customer permission.</li>
-<li><b>Answer Viktor’s 3 questions to ACQ:</b> P-queues stay the dial engine (my vote: yes). Automatic texts or pre-written manual texts (my vote: automatic, from a team number). A softer cadence for Spanish (my vote: yes).</li>
+<li><b>Add a way to log “No-show” and “Presented, no sale”</b> in Close (a Not Sold card option or a lead status), so those lanes can start.</li>
+<li><b>Decide:</b> automatic texts (my vote) or pre-written manual texts, and whether Spanish gets a softer cadence (my vote: yes).</li>
 </ol>
 
 <h3>What we don’t need</h3>
 <ul><li>No Salesmsg, no separate Twilio account, no new Zapier zaps, no CRM switch.</li></ul>
 
-<h2>7. Questions for ACQ AI (paste to it)</h2>
+<h2>7. Questions for ACQ AI (still open after v2)</h2>
+<p class="fine">ACQ answered questions 1–3 (Day 7–30, P-queues vs tasks, who signs the texts). Its answer was cut off partway through question 4, so these are still open. Ask ACQ to answer in pieces under 4,000 characters, because longer pastes get cut off.</p>
 <div class="box"><ol>
-<li>Your answer got cut off at “Day 7” in our paste. Please resend Day 7 through Day 30, plus your “deliverability / spam rules” and “where reps still matter” sections.</li>
-<li>In our Close setup, any open task pulls a lead out of every P-queue. Should the blitz send only texts and emails and keep the P-queues as the dial engine, or should tasks replace P1–P5?</li>
-<li>No rep owns new leads. Should texts come from one shared team number signed “the Biscayne Water team,” or from a named setter? Which gets more replies in your data?</li>
-<li>What does “pulled your [City] water report” mean in real life? If we send the city’s public yearly water report, is that what you meant? If not, what honest hook would you use?</li>
+<li>Finish answer 4: you said “make it literally true: you do have EWG + city data for their ZIP, and…” and it cut off. What exactly should the first text say, and what should we show them?</li>
 <li>For a home water system, how many texts in the first 7 days before opt-outs climb? We plan 6 for English and 4 for Spanish, not 9. Is that too few?</li>
 <li>Should the sequence start when the lead is created, or after the first missed call, so no one gets “can I call you now?” right after we talked?</li>
 <li>Spanish leads get few dials in week 1, then too many later, and some complain. Should Spanish get the same cadence, or a softer one?</li>
 <li>Which 3 numbers should we check each week to judge this (for example reply rate, booked-call rate, STOP rate), and what counts as good for each?</li>
+<li>Why rotate 3–5 numbers at about 20 texts a day? Carriers call spreading texts across numbers “snowshoeing” and can block it. Is 1–2 numbers OK?</li>
 </ol></div>
 
 <h2>8. Sources</h2>
@@ -224,6 +248,8 @@ body{padding:14px 0.65in 0 0.65in}
 <li>Close Workflows: <a href="https://help.close.com/feature-guide/workflows">help.close.com/feature-guide/workflows</a> · Steps: <a href="https://help.close.com/feature-guide/workflows/workflow-steps">/workflows/workflow-steps</a></li>
 <li>Close SMS/MMS: <a href="https://help.close.com/feature-guide/sms-and-mms">/feature-guide/sms-and-mms</a> · 10DLC: <a href="https://help.close.com/feature-guide/sms-and-mms/a2p-10dlc">/a2p-10dlc</a> · Stay compliant: <a href="https://help.close.com/feature-guide/sms-and-mms/a2p-10dlc-stay-compliant">/a2p-10dlc-stay-compliant</a></li>
 <li>Close plans: <a href="https://help.close.com/account-management/plans-and-billing">/plans-and-billing</a> · Usage costs: <a href="https://help.close.com/account-management/variable-usage-costs-calling-sms-phone-numbers-ai-tools">/variable-usage-costs…</a></li>
+<li>ACQ v2: iMessage msgs 127172 and 127179 (Steve, Nov 22; both stored cut at 4,000 characters).</li>
+<li>Snowshoeing: <a href="https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf">CTIA Messaging Principles (May 2023) 5.5.2</a> · <a href="https://assets.ctfassets.net/up8h5u10ttz3/3X151LU5HQDFAvqHVdKva3/365400814daacf73fa64fa054c6843a7/T-Mobile_2020_11.pdf">T-Mobile Code of Conduct 3.1, 4.3, 4.7</a></li>
 <li>Twilio 10DLC timing: <a href="https://www.twilio.com/docs/messaging/compliance/a2p-10dlc/quickstart">twilio.com/docs/…/a2p-10dlc/quickstart</a></li>
 <li>Florida law: <a href="https://leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0500-0599%2F0501%2FSections%2F0501.059.html">§501.059</a> · <a href="https://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&amp;URL=0500-0599%2F0501%2FSections%2F0501.616.html">§501.616</a> · <a href="https://www.fdacs.gov/Business-Services/Florida-Do-Not-Call/What-hours-can-a-telemarketer-call-or-text">FDACS hours</a></li>
 <li>House rules: the Halbert/Ogilvy copy skill, the Biscayne Water objection playbook, and our ad rules (no system price; $0 down, 0% interest, from $69/mo; 1000+ customers, 5 stars; extended 15 year warranty).</li>
