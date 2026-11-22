@@ -49,7 +49,7 @@ body{padding:14px 0.65in 0 0.65in}
 <h1>ACQ AI’s follow-up flow: what to keep, what to fix, and can Grok build it?</h1>
 <p class="sub">Steve asked: push back on what doesn’t make sense, and say if Grok can build it. Short answer: good bones, wrong tools. Build it inside Close. Grok can do most of it.</p>
 
-<div class="box warn"><p class="fine" style="margin:0"><b>Gap in the source.</b> The iMessage paste (msg 127122) is stored cut off at exactly 4,000 characters. It ends right at the heading <b>“Day 7”</b>. So I could not read ACQ’s Day 7, days 8–30, the “deliverability / spam rules” part, or the “where reps still matter” part from that message. For the later stages (reminders, no-show, no-sale, long-term) I used the longer “30-Day Sales Machine” ACQ answer Steve posted in Slack #admin at 11:41 AM ET. If the cut-off part says something different, I have not reviewed it. <b>Labels:</b> <b>Fact</b> = checked in a source. <b>Assumption</b> = my best read, not checked.</p></div>
+<div class="box warn"><p class="fine" style="margin:0"><b>Gap in the source.</b> The iMessage paste (msg 127122) is stored cut off at exactly 4,000 characters. It ends right at the heading <b>“Day 7”</b>. So I could not read ACQ’s Day 7, days 8–30, the “deliverability / spam rules” part, or the “where reps still matter” part from that message. For the later stages (reminders, no-show, no-sale, long-term) I used the longer “30-Day Sales Machine” ACQ answer Steve posted in Slack #admin at 11:41 AM ET. If the cut-off part says something different, I have not reviewed it. <b>AG’s copy reference (msg 127132):</b> the file did not come through. Our iMessage line only receives text, photos, videos and voice notes. A document shows up as an empty placeholder with no file (I checked the photo, audio and video endpoints, and the ZeroSettle docs say documents aren’t delivered). So the rewrites below follow our copy skill and ad rules, <b>not</b> AG’s reference. Send it as a photo/screenshot or a link and I’ll redo them in its voice. <b>Labels:</b> <b>Fact</b> = checked in a source. <b>Assumption</b> = my best read, not checked.</p></div>
 
 <h2>1. TL;DR</h2>
 <ol>
@@ -57,7 +57,7 @@ body{padding:14px 0.65in 0 0.65in}
 <li>❌ <b>Don’t add Salesmsg or Twilio, and don’t use Zapier for the texts.</b> Close already has this built in: Workflows send SMS and email on delays, stop when the lead replies, and block anyone who texts STOP.</li>
 <li>❌ <b>Fix the copy.</b> “Just pulled your water report” is not true at minute 2. “All-in price” by email breaks our rule. Texts sent “from [Rep]” don’t work when no rep owns the lead.</li>
 <li>⚠️ <b>Too many texts, and no quiet hours or STOP line.</b> 9 texts plus 13 calls in 7 days. Spanish leads already complain we call too much.</li>
-<li>🛠️ <b>Can Grok build it?</b> Yes, most of it, inside Close, built paused and tested on a dummy lead first. I need about 6 decisions and 4 checks from the team (section 7).</li>
+<li>🛠️ <b>Can Grok build it?</b> Yes, most of it, inside Close, built paused and tested on a dummy lead first. I need answers to 6 items from the team (section 6) and 8 questions answered by ACQ (section 7).</li>
 </ol>
 
 <h2>2. What ACQ got right</h2>
@@ -206,7 +206,19 @@ body{padding:14px 0.65in 0 0.65in}
 <h3>What we don’t need</h3>
 <ul><li>No Salesmsg, no separate Twilio account, no new Zapier zaps, no CRM switch.</li></ul>
 
-<h2>7. Sources</h2>
+<h2>7. Questions for ACQ AI (paste to it)</h2>
+<div class="box"><ol>
+<li>Your answer got cut off at “Day 7” in our paste. Please resend Day 7 through Day 30, plus your “deliverability / spam rules” and “where reps still matter” sections.</li>
+<li>In our Close setup, any open task pulls a lead out of every P-queue. Should the blitz send only texts and emails and keep the P-queues as the dial engine, or should tasks replace P1–P5?</li>
+<li>No rep owns new leads. Should texts come from one shared team number signed “the Biscayne Water team,” or from a named setter? Which gets more replies in your data?</li>
+<li>What does “pulled your [City] water report” mean in real life? If we send the city’s public yearly water report, is that what you meant? If not, what honest hook would you use?</li>
+<li>For a home water system, how many texts in the first 7 days before opt-outs climb? We plan 6 for English and 4 for Spanish, not 9. Is that too few?</li>
+<li>Should the sequence start when the lead is created, or after the first missed call, so no one gets “can I call you now?” right after we talked?</li>
+<li>Spanish leads get few dials in week 1, then too many later, and some complain. Should Spanish get the same cadence, or a softer one?</li>
+<li>Which 3 numbers should we check each week to judge this (for example reply rate, booked-call rate, STOP rate), and what counts as good for each?</li>
+</ol></div>
+
+<h2>8. Sources</h2>
 <ul class="fine">
 <li>ACQ AI flow: iMessage msg 127122, HSM V3 (Steve, Nov 22; stored text ends at “Day 7”). ACQ “30-Day Sales Machine” plus Viktor’s write-up: Slack #admin thread 1795365703.286719 (Nov 22, 11:41–11:47 AM ET). Viktor’s confidence: 85/100. Texts sent from reps’ cells aren’t counted.</li>
 <li>Close Workflows: <a href="https://help.close.com/feature-guide/workflows">help.close.com/feature-guide/workflows</a> · Steps: <a href="https://help.close.com/feature-guide/workflows/workflow-steps">/workflows/workflow-steps</a></li>
