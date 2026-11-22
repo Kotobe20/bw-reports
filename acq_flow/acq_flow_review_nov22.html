@@ -94,6 +94,8 @@ body{padding:14px 0.65in 0 0.65in}
 <ul>
 <li>At minute 2, nobody has pulled anything. The Slack version goes further: “Got your report done: [X] contaminants over guideline.” We would have to make up X for every city.</li>
 <li>Halbert: a grabber that isn’t honest is “a cheap shot. People resent this kind of fraud” (BL Ch. 14). Ogilvy: never write an ad you wouldn’t want your family to read (HCATS #5).</li>
+<li><b>ACQ agrees (answer 4, cut off):</b> “make it literally true… EWG + city data for their ZIP.” <b>What we really have:</b> EWG’s page for Miami-Dade Water and Sewer (water system FL4130871), checked Nov 22. Our team notes say it lists 18 contaminants above EWG’s health guidelines. I did not recount them for this review. That covers Miami-Dade water customers only. Broward cities and other utilities each need their own EWG page and a ZIP-to-utility list before any text says “your report.”</li>
+<li><b>Fine print on every EWG number:</b> <i>“EWG Tap Water Database, [utility] (PWS [ID]), checked [date]. EWG health guidelines are stricter than federal limits; [utility]’s water meets federal limits. Your home may differ.”</i> Never say the water is illegal or unsafe.</li>
 <li><b>Honest fix:</b> every city posts a yearly water quality report. I can build a city-to-link list for Miami-Dade and Broward, and texts can offer to “walk you through” that real report. If we ever quote a contaminant count, it must come from a named source. EWG “health guidelines” are not legal limits, so say “above EWG’s health guideline,” not “over the limit.” <b>Assumption:</b> I have not built or checked that list yet.</li>
 </ul>
 
@@ -154,9 +156,10 @@ body{padding:14px 0.65in 0 0.65in}
 <div class="box warn"><b>Push back:</b>
 <ul>
 <li><b>“Rotate across 3–5 lines” is a red flag.</b> Spreading the same texts across many numbers is “snowshoeing.” CTIA says senders should not do it, and T-Mobile can shut the campaign down for it. At about 9 leads a day and 2 texts at most per lead, that’s under ~20 texts a day, so 1–2 numbers is plenty. The “100–150 a day per number” cap doesn’t matter at our volume. <span class="cite">CTIA Messaging Principles 5.5.2 · T-Mobile Code of Conduct 3.1, 4.3</span></li>
-<li><b>No-sale text: “we’ll still honor today’s install windows”</b> (softer than v1’s “today’s pricing”). Only send it if install slots really fill up. Otherwise cut it. Our rule: no fake urgency.</li>
+<li><b>No-sale text: “we’ll still honor today’s install windows”</b> reads like fake urgency. (softer than v1’s “today’s pricing”). Only send it if install slots really fill up. Otherwise cut it. Our rule: no fake urgency.</li>
 <li><b>No-sale recap email with price</b> is OK, because they attended and saw it. This is the one place price goes in writing.</li>
-<li><b>“$10K quote” angle:</b> only use it with real competitor quotes from our customers, and don’t name the company unless legal approves.</li>
+<li><b>“$10K quote” angle needs AG’s call.</b> It puts a price number in front of the lead, and our rule bans system prices in ads and email. In a 1:1 follow-up after they’ve already seen our price, a real competitor quote a customer showed us might be OK. Use it only with real quotes, never name the company unless legal approves, and don’t use it in nurture emails until AG says yes.</li>
+<li><b>Signing as a real person who isn’t on shift.</b> If “Amanda” texts and Eddie replies, say so (“Amanda’s with a customer, this is Eddie”). Never pretend to be her. That person must agree to it, and use the same name every time so the lead isn’t confused.</li>
 <li><b>No-show and presented/no-sale lanes need a trigger Close doesn’t have yet.</b> Today there’s no no-show track, and a no-sale gets just one task (Viktor). Reps need a way to log “No-show” and “Presented, no sale,” for example a new choice on the Not Sold card or a lead status. The team has to decide that first.</li>
 <li><b>No-sale cadence</b> (calls on days 1, 3, 7, 14, 30) adds call tasks. Any task pulls the lead out of the P-queues, which is fine here because these leads are past the blitz. Confirm that with Viktor.</li>
 </ul></div>
@@ -213,7 +216,8 @@ body{padding:14px 0.65in 0 0.65in}
 <tr><td>Test on a dummy lead with Viktor: texts land, replies stop the run, P-queues still fill</td><td>Grok + Viktor</td><td>1 hr</td></tr>
 <tr><td>Go live on new leads only, then a weekly check of reply rate, STOP rate and booked calls</td><td>Grok (after your yes)</td><td>15 min/week</td></tr>
 <tr><td>Later lanes from ACQ v2: appointment reminders, no-show (days 0–3), no-sale (days 0, 1, 3, 7, 14, 30), monthly nurture, plus re-entry to the blitz when someone replies</td><td>Grok, after the team adds a “No-show” and “Presented, no sale” marker</td><td>1–1.5 days</td></tr>
-<tr><td><b>Total</b></td><td></td><td><b>About 2–2.5 days of my work</b> (estimate), plus waiting on decisions</td></tr>
+<tr><td>ZIP-to-utility list plus EWG pages and fine print for Miami-Dade and Broward utilities</td><td>Grok</td><td>3–4 hrs</td></tr>
+<tr><td><b>Total</b></td><td></td><td><b>About 2.5–3 days of my work</b> (estimate), plus waiting on decisions</td></tr>
 </table>
 <p class="fine"><b>Assumption:</b> Workflows can’t be built through the Zapier Close actions I have, so I’d build them in Close in my browser. I need a Close login with admin rights there. If it turns out 10DLC isn’t approved yet, Twilio says campaign review takes up to 5 business days for standard use, and a rejected application costs a fee to resubmit. <span class="cite">twilio.com/docs/messaging/compliance/a2p-10dlc/quickstart · help.close.com/…/a2p-10dlc</span></p>
 
@@ -232,9 +236,9 @@ body{padding:14px 0.65in 0 0.65in}
 <ul><li>No Salesmsg, no separate Twilio account, no new Zapier zaps, no CRM switch.</li></ul>
 
 <h2>7. Questions for ACQ AI (still open after v2)</h2>
-<p class="fine">ACQ answered questions 1–3 (Day 7–30, P-queues vs tasks, who signs the texts). Its answer was cut off partway through question 4, so these are still open. Ask ACQ to answer in pieces under 4,000 characters, because longer pastes get cut off.</p>
+<p class="fine">Answered: 1 (Day 7–30, spam rules, rep roles), 2 (P-queues stay, no tasks) and 3 (a real name on 1–2 shared numbers). Half answered: 4 (cut off). Not answered: 5–8. Grok already asked Steve in the group to resend the rest. These are still open. Ask ACQ to answer in pieces under 4,000 characters, because longer pastes get cut off.</p>
 <div class="box"><ol>
-<li>Finish answer 4: you said “make it literally true: you do have EWG + city data for their ZIP, and…” and it cut off. What exactly should the first text say, and what should we show them?</li>
+<li>Finish answer 4: you said “make it literally true: you do have EWG + city data for their ZIP, and…” and it cut off. We only have EWG data for Miami-Dade Water and Sewer (FL4130871) so far. What exactly should the first text say, and what should we show them (a link, a PDF, or a 1-page summary)?</li>
 <li>For a home water system, how many texts in the first 7 days before opt-outs climb? We plan 6 for English and 4 for Spanish, not 9. Is that too few?</li>
 <li>Should the sequence start when the lead is created, or after the first missed call, so no one gets “can I call you now?” right after we talked?</li>
 <li>Spanish leads get few dials in week 1, then too many later, and some complain. Should Spanish get the same cadence, or a softer one?</li>
