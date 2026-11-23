@@ -1,0 +1,58 @@
+[
+ {
+  "slug": "whole-home-filtration",
+  "name": "Whole Home Water Filtration",
+  "es_slug": "filtracion-para-toda-la-casa",
+  "es_name": "Filtración de agua para toda la casa",
+  "kw": [
+   "whole house water filter {c}",
+   "whole home water filtration {c}",
+   "whole house water filtration system installation {c}"
+  ],
+  "kw_es": [
+   "filtro de agua para toda la casa {c}"
+  ]
+ },
+ {
+  "slug": "water-softeners",
+  "name": "Water Softeners",
+  "es_slug": "suavizadores-de-agua",
+  "es_name": "Suavizadores de agua",
+  "kw": [
+   "water softener installation {c}",
+   "water softener {c}",
+   "hard water {c}"
+  ],
+  "kw_es": [
+   "suavizador de agua {c}"
+  ]
+ },
+ {
+  "slug": "reverse-osmosis",
+  "name": "Reverse Osmosis",
+  "es_slug": "osmosis-inversa",
+  "es_name": "Ósmosis inversa",
+  "kw": [
+   "reverse osmosis system {c}",
+   "reverse osmosis installation {c}",
+   "drinking water filter {c}"
+  ],
+  "kw_es": [
+   "ósmosis inversa {c}"
+  ]
+ },
+ {
+  "slug": "pfas-water-filter",
+  "name": "PFAS Water Filtration",
+  "es_slug": "filtro-pfas",
+  "es_name": "Filtro de PFAS (químicos eternos)",
+  "kw": [
+   "pfas water filter {c}",
+   "forever chemicals water filter {c}",
+   "pfas in {c} water"
+  ],
+  "kw_es": [
+   "filtro para químicos eternos {c}"
+  ]
+ }
+]

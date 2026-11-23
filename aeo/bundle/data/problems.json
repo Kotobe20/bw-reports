@@ -1,0 +1,98 @@
+[
+ {
+  "slug": "pfas",
+  "name": "PFAS / forever chemicals",
+  "es_slug": "pfas",
+  "q": [
+   "does miami tap water have pfas",
+   "how to remove pfas from tap water",
+   "does reverse osmosis remove pfas",
+   "does a water softener remove pfas",
+   "pfas in broward county water"
+  ],
+  "q_es": [
+   "químicos eternos en el agua de miami",
+   "cómo eliminar pfas del agua"
+  ]
+ },
+ {
+  "slug": "chloramine",
+  "name": "Chloramine and chlorine taste/smell",
+  "es_slug": "cloro-y-cloramina",
+  "q": [
+   "why does my tap water smell like chlorine miami",
+   "how to remove chloramine from water",
+   "does miami use chlorine or chloramine",
+   "whole house filter for chloramine"
+  ],
+  "q_es": [
+   "agua con olor a cloro miami",
+   "cómo quitar la cloramina del agua"
+  ]
+ },
+ {
+  "slug": "hard-water",
+  "name": "Hard water and scale",
+  "es_slug": "agua-dura",
+  "q": [
+   "how hard is miami water",
+   "do i need a water softener in miami",
+   "hard water spots shower glass florida",
+   "how hard is fort lauderdale water"
+  ],
+  "q_es": [
+   "agua dura en miami",
+   "necesito un suavizador de agua en miami"
+  ]
+ },
+ {
+  "slug": "lead",
+  "name": "Lead in tap water",
+  "es_slug": "plomo",
+  "q": [
+   "is there lead in miami water",
+   "lead service lines miami-dade",
+   "how to test for lead in tap water florida",
+   "does a water filter remove lead"
+  ],
+  "q_es": [
+   "plomo en el agua de miami"
+  ]
+ },
+ {
+  "slug": "disinfection-byproducts",
+  "name": "Disinfection by-products (THMs, HAAs)",
+  "es_slug": null,
+  "q": [
+   "trihalomethanes in miami water",
+   "are disinfection byproducts dangerous"
+  ],
+  "q_es": []
+ },
+ {
+  "slug": "discolored-water",
+  "name": "Yellow, brown or tea-colored water",
+  "es_slug": null,
+  "q": [
+   "why is fort lauderdale water yellow",
+   "brown tap water south florida",
+   "is yellow tap water safe"
+  ],
+  "q_es": [
+   "agua amarilla fort lauderdale"
+  ]
+ },
+ {
+  "slug": "sulfur-smell-well-water",
+  "name": "Rotten egg smell / well water",
+  "es_slug": null,
+  "q": [
+   "well water rotten egg smell south florida",
+   "well water treatment homestead",
+   "iron in well water davie"
+  ],
+  "q_es": [
+   "agua de pozo con olor a huevo podrido"
+  ]
+ }
+]

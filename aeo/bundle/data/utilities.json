@@ -1,0 +1,178 @@
+[
+ {
+  "slug": "miami-dade-wasd",
+  "name": "Miami-Dade Water and Sewer Department (Main System)",
+  "county": "miami-dade-county-fl",
+  "ccr": "https://www.miamidade.gov/resources/water/documents/2025-water-quality-report.pdf",
+  "ewg": "https://www.ewg.org/tapwater/system.php?pws=FL4130871",
+  "verified": true,
+  "data": {
+   "PFOS_ppt_max": 33,
+   "PFOS_range": "7-33",
+   "PFOA_ppt_max": 13,
+   "PFOA_range": "3-13",
+   "PFHxS_ppt_max": 7,
+   "PFNA_ppt_max": 5,
+   "chloramine_ppm_avg": 2.5,
+   "chloramine_range": "ND-4.0",
+   "TTHM_ppb": 50,
+   "TTHM_range": "9-59",
+   "HAA5_ppb": 34,
+   "HAA5_range": "10-43",
+   "lead_ppb_90th": 3.2,
+   "lead_sites_over_AL": "1 of 102",
+   "fluoride": "not added since 2025-06-06; natural 0.1-0.3 ppm",
+   "nitrate_ppm_max": 0.3,
+   "hardness": "not published"
+  }
+ },
+ {
+  "slug": "miami-dade-wasd-south-dade",
+  "name": "Miami-Dade WASD South Dade Water Supply System",
+  "county": "miami-dade-county-fl",
+  "ccr": "https://www.miamidade.gov/resources/water/documents/2025-water-quality-report.pdf",
+  "ewg": null,
+  "verified": true,
+  "data": {
+   "PFOS_ppt_max": 32,
+   "PFOS_range": "16-32",
+   "PFOA_ppt_max": 13,
+   "PFOA_range": "ND-13",
+   "PFHxS_ppt_max": 3,
+   "PFNA_ppt_max": 1,
+   "TTHM_ppb": 36,
+   "HAA5_ppb": 11,
+   "lead_ppb_90th": 1.1,
+   "lead_sites_over_AL": "0 of 37",
+   "copper_sites_over_AL": "2 of 37",
+   "nitrate_ppm_max": 7,
+   "nitrate_range": "1-7",
+   "disinfectant": "free chlorine (per third-party summary; confirm in CCR text)"
+  }
+ },
+ {
+  "slug": "miami-beach",
+  "name": "City of Miami Beach (WASD wholesale)",
+  "county": "miami-dade-county-fl",
+  "ccr": null,
+  "ewg": null,
+  "verified": false,
+  "data": {}
+ },
+ {
+  "slug": "north-miami-beach",
+  "name": "North Miami Beach water utility",
+  "county": "miami-dade-county-fl",
+  "ccr": null,
+  "ewg": null,
+  "verified": false,
+  "data": {}
+ },
+ {
+  "slug": "homestead",
+  "name": "City of Homestead utility",
+  "county": "miami-dade-county-fl",
+  "ccr": null,
+  "ewg": null,
+  "verified": false,
+  "data": {}
+ },
+ {
+  "slug": "north-miami",
+  "name": "City of North Miami utility",
+  "county": "miami-dade-county-fl",
+  "ccr": null,
+  "ewg": null,
+  "verified": false,
+  "data": {}
+ },
+ {
+  "slug": "fort-lauderdale",
+  "name": "City of Fort Lauderdale",
+  "county": "broward-county-fl",
+  "ccr": "https://www.fortlauderdale.gov/Government/Departments/Utility-Services/Water-Quality-Report",
+  "ewg": null,
+  "verified": false,
+  "data": {
+   "note": "2025 report says water met all standards; new Prospect Lake plant (nanofiltration + ion exchange) began supplying in 2026 to address yellow/tannin color (Axios Aug 12 2026; WLRN Oct 15 2026). Pull numbers from the CCR PDF."
+  }
+ },
+ {
+  "slug": "hollywood",
+  "name": "City of Hollywood",
+  "county": "broward-county-fl",
+  "ccr": "https://www.hollywoodfl.org/DocumentCenter/View/25123/2025WaterQualityReport",
+  "ewg": null,
+  "verified": false,
+  "data": {
+   "chloramine_ppm": 2.42,
+   "chloramine_range": "0.03-3.2",
+   "lead_ppb_90th": 3.5,
+   "PFOS_reported": "0.02 (March 2024, UNIT NOT PRINTED; confirm)",
+   "PFOA_reported": "0.006 (UNIT NOT PRINTED; confirm)"
+  }
+ },
+ {
+  "slug": "broward-county",
+  "name": "Broward County Water and Wastewater Services",
+  "county": "broward-county-fl",
+  "ccr": "https://www.broward.org/waterservices/WaterQualityReport",
+  "ewg": null,
+  "verified": false,
+  "data": {}
+ },
+ {
+  "slug": "pembroke-pines",
+  "name": "City of Pembroke Pines",
+  "county": "broward-county-fl",
+  "ccr": null,
+  "ewg": null,
+  "verified": false,
+  "data": {}
+ },
+ {
+  "slug": "miramar",
+  "name": "City of Miramar",
+  "county": "broward-county-fl",
+  "ccr": null,
+  "ewg": null,
+  "verified": false,
+  "data": {}
+ },
+ {
+  "slug": "sunrise",
+  "name": "City of Sunrise",
+  "county": "broward-county-fl",
+  "ccr": null,
+  "ewg": null,
+  "verified": false,
+  "data": {}
+ },
+ {
+  "slug": "plantation",
+  "name": "City of Plantation",
+  "county": "broward-county-fl",
+  "ccr": null,
+  "ewg": null,
+  "verified": false,
+  "data": {}
+ },
+ {
+  "slug": "pompano-beach",
+  "name": "City of Pompano Beach",
+  "county": "broward-county-fl",
+  "ccr": null,
+  "ewg": null,
+  "verified": false,
+  "data": {}
+ },
+ {
+  "slug": "coral-springs",
+  "name": "Coral Springs area providers",
+  "county": "broward-county-fl",
+  "ccr": null,
+  "ewg": null,
+  "verified": false,
+  "data": {}
+ }
+]

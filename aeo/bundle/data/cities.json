@@ -1,0 +1,452 @@
+[
+ {
+  "name": "Miami",
+  "slug": "miami",
+  "county": "miami-dade-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": "miami-fl",
+  "spanishPage": true,
+  "utilityHint": "WASD Main System",
+  "pfasHotspotPerFIU": true
+ },
+ {
+  "name": "Hialeah",
+  "slug": "hialeah",
+  "county": "miami-dade-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": null,
+  "spanishPage": true,
+  "utilityHint": "WASD Main System (verify: City of Hialeah distribution)",
+  "pfasHotspotPerFIU": true
+ },
+ {
+  "name": "Miami Beach",
+  "slug": "miami-beach",
+  "county": "miami-dade-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": "miami-beach-fl",
+  "spanishPage": false,
+  "utilityHint": "WASD Main System via City of Miami Beach (wholesale; verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Coral Gables",
+  "slug": "coral-gables",
+  "county": "miami-dade-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": "coral-gables-fl",
+  "spanishPage": false,
+  "utilityHint": "WASD Main System (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Kendall",
+  "slug": "kendall",
+  "county": "miami-dade-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": "kendall-fl",
+  "spanishPage": true,
+  "utilityHint": "WASD Main System (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Doral",
+  "slug": "doral",
+  "county": "miami-dade-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": "doral-fl",
+  "spanishPage": true,
+  "utilityHint": "WASD Main System (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Homestead",
+  "slug": "homestead",
+  "county": "miami-dade-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": null,
+  "spanishPage": true,
+  "utilityHint": "City of Homestead utility or WASD South Dade (verify by address)",
+  "pfasHotspotPerFIU": true
+ },
+ {
+  "name": "Pinecrest",
+  "slug": "pinecrest",
+  "county": "miami-dade-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": "pinecrest-fl",
+  "spanishPage": false,
+  "utilityHint": "WASD Main System (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Aventura",
+  "slug": "aventura",
+  "county": "miami-dade-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": "aventura-fl",
+  "spanishPage": false,
+  "utilityHint": "North Miami Beach utility or WASD (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Brickell",
+  "slug": "brickell",
+  "county": "miami-dade-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": null,
+  "spanishPage": false,
+  "utilityHint": "WASD Main System",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Miami Lakes",
+  "slug": "miami-lakes",
+  "county": "miami-dade-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "miami-lakes-fl",
+  "spanishPage": true,
+  "utilityHint": "WASD Main System (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Cutler Bay",
+  "slug": "cutler-bay",
+  "county": "miami-dade-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "cutler-bay-fl",
+  "spanishPage": false,
+  "utilityHint": "WASD (verify Main vs South Dade)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Palmetto Bay",
+  "slug": "palmetto-bay",
+  "county": "miami-dade-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "palmetto-bay-fl",
+  "spanishPage": false,
+  "utilityHint": "WASD (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "North Miami",
+  "slug": "north-miami",
+  "county": "miami-dade-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "north-miami-fl",
+  "spanishPage": true,
+  "utilityHint": "City of North Miami utility (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "North Miami Beach",
+  "slug": "north-miami-beach",
+  "county": "miami-dade-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "north-miami-beach-fl",
+  "spanishPage": false,
+  "utilityHint": "NMB Water (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Sunny Isles Beach",
+  "slug": "sunny-isles-beach",
+  "county": "miami-dade-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "sunny-isles-beach-fl",
+  "spanishPage": false,
+  "utilityHint": "verify",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Key Biscayne",
+  "slug": "key-biscayne",
+  "county": "miami-dade-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "key-biscayne-fl",
+  "spanishPage": false,
+  "utilityHint": "WASD (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "South Miami",
+  "slug": "south-miami",
+  "county": "miami-dade-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "south-miami-fl",
+  "spanishPage": false,
+  "utilityHint": "WASD (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Westchester",
+  "slug": "westchester",
+  "county": "miami-dade-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "westchester-fl",
+  "spanishPage": true,
+  "utilityHint": "WASD (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Sweetwater",
+  "slug": "sweetwater",
+  "county": "miami-dade-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "sweetwater-fl",
+  "spanishPage": true,
+  "utilityHint": "WASD (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Miami Gardens",
+  "slug": "miami-gardens",
+  "county": "miami-dade-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": null,
+  "spanishPage": false,
+  "utilityHint": "verify",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Coconut Grove",
+  "slug": "coconut-grove",
+  "county": "miami-dade-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "coconut-grove-fl",
+  "spanishPage": false,
+  "utilityHint": "WASD Main System",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Fort Lauderdale",
+  "slug": "fort-lauderdale",
+  "county": "broward-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": "fort-lauderdale-fl",
+  "spanishPage": false,
+  "utilityHint": "City of Fort Lauderdale",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Hollywood",
+  "slug": "hollywood",
+  "county": "broward-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": "hollywood-fl",
+  "spanishPage": true,
+  "utilityHint": "City of Hollywood",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Pembroke Pines",
+  "slug": "pembroke-pines",
+  "county": "broward-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": "pembroke-pines-fl",
+  "spanishPage": true,
+  "utilityHint": "City of Pembroke Pines (verify)",
+  "pfasHotspotPerFIU": true
+ },
+ {
+  "name": "Miramar",
+  "slug": "miramar",
+  "county": "broward-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": "miramar-fl",
+  "spanishPage": true,
+  "utilityHint": "City of Miramar (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Weston",
+  "slug": "weston",
+  "county": "broward-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": "weston-fl",
+  "spanishPage": false,
+  "utilityHint": "verify",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Davie",
+  "slug": "davie",
+  "county": "broward-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": "davie-fl",
+  "spanishPage": false,
+  "utilityHint": "Town of Davie / others (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Plantation",
+  "slug": "plantation",
+  "county": "broward-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": "plantation-fl",
+  "spanishPage": false,
+  "utilityHint": "City of Plantation (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Coral Springs",
+  "slug": "coral-springs",
+  "county": "broward-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": "coral-springs-fl",
+  "spanishPage": false,
+  "utilityHint": "verify (multiple providers)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Parkland",
+  "slug": "parkland",
+  "county": "broward-county-fl",
+  "tier": 1,
+  "legacyFlatSlug": "parkland-fl",
+  "spanishPage": false,
+  "utilityHint": "verify",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Sunrise",
+  "slug": "sunrise",
+  "county": "broward-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "sunrise-fl",
+  "spanishPage": false,
+  "utilityHint": "City of Sunrise (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Pompano Beach",
+  "slug": "pompano-beach",
+  "county": "broward-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "pompano-beach-fl",
+  "spanishPage": false,
+  "utilityHint": "City of Pompano Beach (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Deerfield Beach",
+  "slug": "deerfield-beach",
+  "county": "broward-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "deerfield-beach-fl",
+  "spanishPage": false,
+  "utilityHint": "City of Deerfield Beach (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Hallandale Beach",
+  "slug": "hallandale-beach",
+  "county": "broward-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "hallandale-beach-fl",
+  "spanishPage": true,
+  "utilityHint": "City of Hallandale Beach (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Cooper City",
+  "slug": "cooper-city",
+  "county": "broward-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "cooper-city-fl",
+  "spanishPage": false,
+  "utilityHint": "verify",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Southwest Ranches",
+  "slug": "southwest-ranches",
+  "county": "broward-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "southwest-ranches-fl",
+  "spanishPage": false,
+  "utilityHint": "many homes on private wells (verify)",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Tamarac",
+  "slug": "tamarac",
+  "county": "broward-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "tamarac-fl",
+  "spanishPage": false,
+  "utilityHint": "verify",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Lighthouse Point",
+  "slug": "lighthouse-point",
+  "county": "broward-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": "lighthouse-point-fl",
+  "spanishPage": false,
+  "utilityHint": "verify",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Dania Beach",
+  "slug": "dania-beach",
+  "county": "broward-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": null,
+  "spanishPage": false,
+  "utilityHint": "verify",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Wilton Manors",
+  "slug": "wilton-manors",
+  "county": "broward-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": null,
+  "spanishPage": false,
+  "utilityHint": "verify",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Oakland Park",
+  "slug": "oakland-park",
+  "county": "broward-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": null,
+  "spanishPage": false,
+  "utilityHint": "verify",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Lauderhill",
+  "slug": "lauderhill",
+  "county": "broward-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": null,
+  "spanishPage": false,
+  "utilityHint": "verify",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Margate",
+  "slug": "margate",
+  "county": "broward-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": null,
+  "spanishPage": false,
+  "utilityHint": "verify",
+  "pfasHotspotPerFIU": false
+ },
+ {
+  "name": "Coconut Creek",
+  "slug": "coconut-creek",
+  "county": "broward-county-fl",
+  "tier": 2,
+  "legacyFlatSlug": null,
+  "spanishPage": false,
+  "utilityHint": "verify",
+  "pfasHotspotPerFIU": false
+ }
+]
